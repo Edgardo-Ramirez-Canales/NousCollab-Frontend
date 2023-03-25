@@ -1,0 +1,106 @@
+{
+  "workbench.colorCustomizations": {
+    "[Community Material Theme]": {},
+    "menu.background": "#1f1f1f" /* el color del menu */,
+    "activityBarBadge.background": "#29abe2" /* COLOR AZUL SOURCE CONTROL */,
+    "activityBar.activeBorder": "#0f7cbd",
+    "list.activeSelectionForeground": "#29abe2",
+    "list.inactiveSelectionForeground": "#40c2ff",
+    "list.highlightForeground": "#29abe2",
+    "scrollbarSlider.activeBackground": "#40c2ff",
+    "editorSuggestWidget.highlightForeground": "#29abe2",
+    "textLink.foreground": "#ff40fc",
+    "progressBar.background": "#a33dff",
+    "pickerGroup.foreground": "#a33dff",
+    "tab.activeBorder": "#0f7cbd" /* linea azul e */,
+    "notificationLink.foreground": "#29abe2",
+    "editorWidget.resizeBorder": "#29abe2",
+    "editorWidget.border": "#40c2ff",
+    "settings.modifiedItemIndicator": "#29abe2",
+    "settings.headerForeground": "#29abe2" /* LINEA AZUL DE TERMINAL */,
+    "panelTitle.activeBorder": "#0f7cbd",
+    "breadcrumb.activeSelectionForeground": "#29abe2",
+    "menu.selectionForeground": "#40c2ff" /* color de la letra */,
+    "menubar.selectionForeground": "#29abe2",
+    "editor.findMatchBorder": "#29abe2",
+    "selection.background": "#1f1f1fcf",
+    /*INICIO COLOR  DE LAS LLAVES Y CORCHETES */
+    "editorBracketHighlight.foreground1": "#00FFFF",
+    "editorBracketHighlight.foreground2": "#FF8C00",
+    "editorBracketHighlight.foreground3": "#1587f9",
+    "editorBracketHighlight.foreground4": "#23e27c",
+    "editorBracketHighlight.foreground5": "#5E5E5E",
+    "editorBracketHighlight.foreground6": "#F5F5F5",
+    /*FIN COLOR  DE LAS LLAVES Y CORCHETES */
+
+    "editor.tokenColorCustomizations": {
+      "textMateRules": [
+        {
+          "scope": "string",
+          "settings": {
+            "fontStyle": "italic",
+            "foreground": "#29abe2"
+          }
+        }
+      ]
+    },
+    "editorSuggestWidget.selectedBackground": "#40c2ff",
+    "editor.selectionBackground": "#3247b1cf" /* al seleccionar */,
+    "editor.selectionHighlightBackground": "#29abe2",
+    "editorLineNumber.foreground": "#a6a6a6" /* color de numero de linea */,
+    "activityBar.background": "#116bd1" /* BARRA LATERAL */,
+    "titleBar.activeBackground": "#0707078a" /* BARRA SUPERIOR */,
+    "titleBar.activeForeground": "#29abe2"
+  },
+  /* "liveServer.settings.port": 5501 */
+
+  /* //!CONFIGURACION DE FORMATEO DE CODIGO  */
+
+  // General Settings
+  "editor.tabSize": 2, // Establece el tamaño de tabulación en 2 espacios
+  "editor.wordWrap": "on", // Activa el ajuste de línea automático
+  "editor.fontSize": 14, // Establece el tamaño de fuente en 14
+  //"editor.fontFamily": "Fira Code, Menlo, Monaco, 'Courier New', monospace", // Establece la fuente del editor
+
+  // Apariencia
+  "workbench.colorTheme": "Default Dark+", // Establece el tema de color del editor
+  "workbench.iconTheme": "material-icon-theme", // Establece el tema de iconos
+  "workbench.editor.showTabs": true, // Muestra las pestañas de los editores abiertos
+  "workbench.editor.tabCloseButton": "left", // Muestra los botones de cerrar pestañas en el ladoizquierdo
+
+  // Comportamiento
+  "editor.formatOnSave": true, // Formatea el documento al guardar
+  "editor.formatOnType": true, // Formatea el documento al escribir
+  "editor.formatOnPaste": true, // Formatea el documento al pegar
+  "editor.mouseWheelZoom": true, // Permite hacer zoom con la rueda del mouse
+  "editor.snippetSuggestions": "top", // Muestra las sugerencias de snippets en la parte superior
+  "editor.suggestSelection": "first", // Selección automática de la primera sugerencia
+  "editor.wordBasedSuggestions": true, // Permite las sugerencias basadas en palabras
+  "editor.tabCompletion": "on", // Completa automáticamente con TAB
+  "editor.acceptSuggestionOnEnter": "smart", // Acepta las sugerencias con ENTER solo cuando hacen cambios significativos
+  "editor.dragAndDrop": true, // Permite arrastrar y soltar el texto seleccionado
+  "editor.linkedEditing": true, // Permite la edición vinculada en múltiples selecciones
+
+  // Git
+  "git.confirmSync": true, // Si muestra una confirmación al sincronizar con Git
+  "git.autofetch": false, // NO Actualiza automáticamente la información del repositorio
+  "git.enableSmartCommit": true, // Habilita los Smart Commits
+
+  // Lenguajes de programación
+  "[javascript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode" // Formatea automáticamente el código al guardar
+  },
+  "[typescript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode" // Formatea automáticamente el código al guardar
+  },
+  "[html]": {
+    "editor.defaultFormatter": "vscode.html-language-features" // Formatea automáticamente el código al guardar
+  },
+  "[css]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode" // Formatea automáticamente el código al guardar
+  },
+
+  /* OTROS */
+  "prettier.printWidth": 170,
+  "prettier.bracketSameLine": true /* los corchetes en diferentes lineas */
+}
