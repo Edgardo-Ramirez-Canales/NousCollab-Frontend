@@ -18,7 +18,7 @@ UNAH (Autonomous University of Honduras). Project for the **Systems Experts** cl
 
 ## Deploy 🚀
 
-[![Deploy on Vercel](https://assets.website-files.com/5c8bce998bdcd3b7371625fa/63f1d4e4461fa06f4ac6c343_vercel-hosting-sanity-cms-react-p-800.webp)](https://vercel.com/)
+-[Vercel]
 
 ##
 
