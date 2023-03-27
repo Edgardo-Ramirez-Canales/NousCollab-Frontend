@@ -12,9 +12,9 @@ const childRoutes: Routes = [
     data: { titulo: 'Proyect' },
   },
   {
-    path: 'proyects',
+    path: 'nousCollab',
     component: ProyectsComponent,
-    data: { titulo: 'Proyects' },
+    data: { titulo: 'NousCollab' },
   },
   {
     path: 'perfil',

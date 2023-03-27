@@ -1,24 +1,19 @@
 import { Routes, RouterModule } from '@angular/router';
 import { NgModule } from '@angular/core';
 
-
 import { PagesComponent } from './pages.component';
 
-
-
-
 const routes: Routes = [
-    { 
-        path: 'proyects', 
-        component: PagesComponent,
-        loadChildren: () => import('./child-routes.module').then( m => m.ChildRoutesModule )
-    },
+  {
+    path: 'nousCollab',
+    component: PagesComponent,
+    loadChildren: () =>
+      import('./child-routes.module').then((m) => m.ChildRoutesModule),
+  },
 ];
 
 @NgModule({
-    imports: [ RouterModule.forChild(routes) ],
-    exports: [ RouterModule ]
+  imports: [RouterModule.forChild(routes)],
+  exports: [RouterModule],
 })
 export class PagesRoutingModule {}
-
-
