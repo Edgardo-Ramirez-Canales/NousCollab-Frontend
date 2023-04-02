@@ -1,1 +1,28 @@
-<p>proyects works!</p>
+<body class="align">
+
+  <div class="space">
+
+    <header class="projects__header">
+      <img src="https://i.ibb.co/58kfYG8/gestion-de-proyectos.png" alt="gestion-de-proyectos" border="0" class="img-p">
+      <h2>Mís proyectos</h2>
+      <input class="button" type="submit" value="Crear nuevo proyecto">
+    </header>
+
+    <div class="projects">
+
+      <div *ngFor="let proyecto of cargarProyectos()">
+        <div class="card">
+          <img src="https://i.ibb.co/09Dhfkh/carpeta.png" alt="carpeta" border="0" class="carpeta" [routerLink]="['/nousCollab/proyect']" routerLinkActive="router-link-active" >
+          <img src="https://i.ibb.co/FncN518/options.png" alt="options" border="0" class="opciones"
+            title="Ver opciones">
+          <img src="https://i.ibb.co/sVW73HX/sharing.png" alt="sharing" border="0" class="compartido"
+            *ngIf="proyecto.compartido" title="Compartido por {{proyecto.por}}">
+          <p class="nombre">{{proyecto.nombre}}</p>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+
+</body>

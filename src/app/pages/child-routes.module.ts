@@ -12,7 +12,7 @@ const childRoutes: Routes = [
     data: { titulo: 'Proyect' },
   },
   {
-    path: 'nousCollab',
+    path: 'proyects',
     component: ProyectsComponent,
     data: { titulo: 'NousCollab' },
   },

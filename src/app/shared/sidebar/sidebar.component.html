@@ -1,0 +1,84 @@
+<div class="navigation">
+  <ul>
+    <li class="" [ngClass]="{'active': item.active}" *ngFor="let item of items; let i = index;">
+      <a href="{{ item.link }}" (click)="activarLink(i)">
+        <span class="icon" [ngStyle]="{ 'background-color': hoveredIndex === i ? 'rgba(254, 173, 86, 0.826)' : '' }" (mouseover)="onMouseOver(i)"
+          (mouseout)="onMouseOut()">
+          <i [ngClass]="'bx ' + item.icon"></i>
+        </span>
+
+        <span class="text">{{ item.text }}</span>
+      </a>
+    </li>
+  </ul>
+</div>
+
+
+
+
+
+
+
+
+
+
+<!-- <div class="navigation">
+  <ul>
+    <li class="" [ngClass]="{'active': item.active}" *ngFor="let item of items; let i = index;">
+      <a href="#" (click)="activarLink(i)">
+        <span class="icon" [ngClass]="{'active': isMouseOverIcon[i]}" (mouseover)="onMouseOverIcon(i)"
+          (mouseleave)="onMouseLeaveIcon(i)">
+          <i [ngClass]="'bx ' + item.icon"></i>
+        </span>
+        <span class="text">{{ item.text }}</span>
+      </a>
+    </li>
+  </ul>
+</div> -->
+
+
+
+
+<!-- 
+<div class="navigation">
+  <div class="menuToggle"></div>
+  <ul>
+    <li class="list active" style="--clr:#e87a12cc;">
+      <a href="#">
+        <span class="icon"><i class="bx bx-home"></i></span>
+        <span class="text">Inicio</span>
+      </a>
+    </li>
+    <li class="list" style="--clr:#ffa117;">
+      <a href="#">
+        <span class="icon"><i class="bx bx-wallet"></i></span>
+        <span class="text">Proyectos</span>
+      </a>
+    </li>
+    <li class="list" style="--clr:#ffa117;">
+      <a href="#">
+        <span class="icon"><i class="bx bx-add-to-queue"></i></span>
+        <span class="text">Crear Proyecto</span>
+      </a>
+    </li>
+    <li class="list" style="--clr:#ffa117;">
+      <a href="#">
+        <span class="icon"><i class="bx bx-share-alt"></i></span>
+        <span class="text">Compartir</span>
+      </a>
+    </li>
+
+    <li class="list" style="--clr:#f38e21;">
+      <a href="#">
+        <span class="icon"><i class="bx bx-user"></i></span>
+        <span class="text">Perfil</span>
+      </a>
+    </li>
+    <li class="list" style="--clr:#e3891b;">
+      <a href="#">
+        <span class="icon"><i class="bx bx-cog"></i></span>
+        <span class="text">Ajustes</span>
+      </a>
+    </li>
+  </ul>
+</div> -->

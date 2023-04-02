@@ -1,11 +1,12 @@
-/* You can add global styles to this file, and also import other style files */
+
+/* Fuente */
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;900&display=swap');
 
 /*=============== VARIABLES CSS ===============*/
 :root {
   --header-height: 3.5rem;
 
-  /*========== Colors ==========*/
+  /*========== Colores ==========*/
   --hue: 14;
   --first-color: hsl(var(--hue), 91%, 54%);
   --first-color-alt: hsl(var(--hue), 91%, 50%);
@@ -13,11 +14,11 @@
   --text-color: hsl(var(--hue), 4%, 95%);
   --text-color-light: hsl(var(--hue), 4%, 55%);
 
-  /*Green gradient*/
+  /*Gradientes*/
   --body-color: linear-gradient(90deg, hsl(23, 84%, 75%) 0%, hsl(9, 92%, 54%) 100%);
   --container-color: linear-gradient(136deg, hsl(120, 1%, 15%) 0%, hsl(0, 0%, 3%) 100%);
 
-  /*========== Font and typography ==========*/
+  /*========== Fuente y tipografia ==========*/
   --body-font: 'Poppins', sans-serif;
   --biggest-font-size: 2rem;
   --h1-font-size: 1.5rem;
@@ -27,7 +28,7 @@
   --small-font-size: .813rem;
   --smaller-font-size: .75rem;
 
-  /*========== Font weight ==========*/
+  /*========== Grosor de letra ==========*/
   --font-medium: 500;
   --font-semi-bold: 600;
   --font-black: 900;
@@ -41,12 +42,12 @@
   --mb-2: 2rem;
   --mb-2-5: 2.5rem;
 
-  /*========== z index ==========*/
+  /*========== z index Elementos superpuestos ==========*/
   --z-tooltip: 10;
-  --z-fixed: 100;
+  --z-fixed: 100; /* para el boton fijo del scroll */
 }
 
-/* Responsive typography */
+/* Responsive tipografia */
 @media screen and (min-width: 992px) {
   :root {
     --biggest-font-size: 4rem;
@@ -60,6 +61,7 @@
 }
 
 /*=============== BASE ===============*/
+
 *{
   box-sizing: border-box;
   padding: 0;
@@ -67,7 +69,7 @@
 }
 
 html{
-  scroll-behavior: smooth;
+  scroll-behavior: smooth; /* para que me invite a hacer scroll suave*/
 }
 
 body{
@@ -84,22 +86,22 @@ h1,h2,h3,h4{
 }
 
 ul{
-  list-style: none;
+  list-style: none; /*para que no lleve los puntos de las listas  */
 }
 
 a{
-  text-decoration: none;
+  text-decoration: none; /* quita el subrallado a los enlaces */
 }
 
 img{
-  max-width: 100%;
-  height: auto;
+  max-width: 100%; 
+  height: auto; /* altura autimatica */
 }
 
 button,
 input{
   border: none;
-  outline: none;
+  outline: none; /* sin borde externo */
 }
 
 button{
@@ -110,7 +112,7 @@ button{
 
 /*=============== REUSABLE CSS CLASSES ===============*/
 .section{
-  padding: 4.5rem 0 2rem;
+  padding: 3.5rem 0 1rem 0;
 }
 
 .section__title{
@@ -132,4 +134,15 @@ button{
 
 .main{
   overflow: hidden; /*For animation*/
+}
+
+/*=============== SCROLL BAR ===============*/
+::-webkit-scrollbar {
+  width: 0.6rem;
+  background: #413e3e;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #272525;
+  border-radius: 0.5rem;
 }

@@ -1,1 +1,85 @@
-<p>register works!</p>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body class="align">
+
+  <div class="register">
+
+    <header class="register__header">
+      <img src="https://i.ibb.co/BcJq7q5/edit.png" alt="edit" border="0" class="img-r">
+      <h2>Registro</h2>
+    </header>
+
+    <form action="#" class="register__form" method="POST">
+
+      <div>
+        <label for="email">Nombre</label>
+        <input type="text" id="nombres" name="nombres" placeholder="">
+      </div>
+
+      <div>
+        <label for="password">Apellidos</label>
+        <input type="text" id="apellidos" name="apellidos" placeholder="">
+      </div>
+
+      <div>
+        <label for="email">Nombre de usuario</label>
+        <input type="text" id="username" name="username" placeholder="">
+      </div>
+
+      <div>
+        <label for="email">Correo electrónico</label>
+        <input type="email" id="email" name="email" placeholder="usuario@dominio.com">
+      </div>
+
+      <div>
+        <label for="email">Fecha de nacimiento</label>
+        <input type="date" id="birthdate" name="birthdate" placeholder="">
+      </div>
+
+      <div>
+        <label for="email">Contraseña</label>
+        <input type="password" id="password" name="password" placeholder="">
+      </div>
+
+      <div>
+        <label for="email">Confirma tu contraseña</label>
+        <input type="password" id="passwordC" name="passwordC" placeholder="">
+      </div>
+
+      <div>
+        <label for="email">Foto de perfil</label>
+        <div class="input-div">
+          <input type="file" class="file" multiple="multiple" accept="image/jpeg, image/png, image/jpg">
+        </div>
+      </div>
+
+      <a [routerLink]="['/login']" routerLinkActive="router-link-active" class="link-l">¿Ya tienes una cuenta? ¡Inicia
+        sesión!</a>
+
+      <a href="#" class="fb btn">
+        <i class="fa fa-facebook fa-fw"><img class="imagen-fb"
+            src="https://cdn-icons-png.flaticon.com/512/2504/2504903.png"></i><span class="texto-fb">Registrarme con
+          Facebook</span>
+      </a>
+
+      <div>
+        <input class="button" type="submit" value="Registrarme">
+      </div>
+
+    </form>
+
+  </div>
+
+  <svg xmlns="http://www.w3.org/2000/svg" class="icons">
+
+    <symbol id="icon-lock" viewBox="0 0 448 512">
+      <path
+        d="M400 224h-24v-72C376 68.2 307.8 0 224 0S72 68.2 72 152v72H48c-26.5 0-48 21.5-48 48v192c0 26.5 21.5 48 48 48h352c26.5 0 48-21.5 48-48V272c0-26.5-21.5-48-48-48zm-104 0H152v-72c0-39.7 32.3-72 72-72s72 32.3 72 72v72z" />
+    </symbol>
+
+  </svg>
+
+</body>
+

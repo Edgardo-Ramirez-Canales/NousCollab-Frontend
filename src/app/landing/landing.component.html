@@ -1,9 +1,10 @@
 <!-- #region ENCABEZADO -->
 <header class="header" id="header">
   <nav class="nav container">
-    <a href="#" class="nav__logo">
-      <img src="assets/img/trick-treat5-img.png" alt="" class="nav__logo-img" />
-      NoûsCollab
+    <a href="#home" class="nav__logo">
+      <!-- nuestra marca -->
+      <img src="assets/img/logoed.png" alt="" class="nav__logo-img" />
+      Noûs Collab
     </a>
     <div class="nav__menu" id="nav-menu">
       <ul class="nav__list">
@@ -11,7 +12,7 @@
           <a href="#home" class="nav__link active-link">Inicio</a>
         </li>
         <li class="nav__item">
-          <a href="#about" class="nav__link">Sobre</a>
+          <a href="#about" routerLinkActive="router-link-active" class="nav__link">Sobre</a>
         </li>
         <li class="nav__item">
           <a href="#trick" class="nav__link">Planes</a>
@@ -21,10 +22,12 @@
         </li>
         <a [routerLink]="['/login']" routerLinkActive="router-link-active" class="button button--ghost">Login</a>
       </ul>
+      <!-- boton responsive cuando este cerrado -->
       <div class="nav__close" id="nav-close">
         <i class="bx bx-x"></i>
       </div>
-      <img src="assets/img/nav-img.png" alt="" class="nav__img" />
+      <!-- imagen a -->
+      <!-- <img src="assets/img/nav-img.png" alt="" class="nav__img" /> -->
     </div>
     <div class="nav__toggle" id="nav-toggle">
       <i class="bx bx-grid-alt"></i>
@@ -32,6 +35,8 @@
   </nav>
 </header>
 <!-- #endregion -->
+
+
 <!-- #region Principal-->
 <main class="main">
   <!--Menu inicial-->
@@ -41,29 +46,41 @@
         <section class="swiper-slide">
           <div class="home__content grid">
             <div class="home__group">
-              <img src="assets/img/home2-img.png" alt="" class="home__img" />
+              <!-- <img src="assets/img/colab.png" alt="" class="home__img" /> -->
+              <!--  -->
+              <div
+                style="overflow:hidden;margin-left:auto;margin-right:auto;border-radius:10px;width:100%;max-width:1244px;position:relative">
+                <div style="width:100%;padding-bottom:66.2379421221865%"></div><iframe width="1244" height="824"
+                  title="nous" src="https://snappify.com/embed/f7d4e588-e26f-4027-86d9-d8f91e6065e0?responsive"
+                  allow="clipboard-write" style="background:#FFFFFF00;position:absolute;left:0;top:0;width:100%"
+                  frameborder="0"></iframe>
+              </div>
+              <!--  <div
+                style="overflow:hidden;margin-left:auto;margin-right:auto;border-radius:10px;width:97% ;max-width:1015px;position:relative">
+                <div style="width:100%;padding-bottom:71.33004926108374%"></div><iframe width="1015" height="724"
+                  title="nous" src="https://snappify.com/embed/f7d4e588-e26f-4027-86d9-d8f91e6065e0?responsive"
+                  allow="clipboard-write" style="background:#FFFFFF00;position:absolute;left:0;top:0;width:100%"
+                  frameborder="0"></iframe>
+              </div> -->
+              <!--  -->
               <div class="home__indicator"></div>
-
               <div class="home__details-img">
-                <h4 class="home__details-title">NoûsCollab</h4>
+                <h4 class="home__details-title"><br />Noûs Collab</h4>
                 <span class="home__details-subtitle">
                   "Controlar la complejidad es la esencia de la programación"</span>
               </div>
             </div>
-
             <div class="home__data">
               <h3 class="home__subtitle">#1 Desarrollo</h3>
-              <h1 class="home__title">
-                NOUS <br />
+              <h2 class="home__title">
+                NOÛS <br />
                 COLLAB!!
-              </h1>
+              </h2>
               <p class="home__description">
-                Es un entorno de desarrollo social. En esencia, le permite escribir código en el navegador y ver los
+                Es un entorno de desarrollo social, permite escribir código en el navegador y ver los
                 resultados a medida
-                que construye. Un editor de código en línea útil y liberador para desarrolladores de cualquier
-                habilidad.
+                que construye. Un editor de código en línea útil y liberador para desarrolladores.
               </p>
-
               <div class="home__buttons">
                 <a [routerLink]="['/register']" routerLinkActive="router-link-active" class="button">Registrarse</a>
                 <a href="#" class="button--link button--flex">Comienza ya
@@ -72,44 +89,44 @@
             </div>
           </div>
         </section>
-
       </div>
-      <div class="swiper-pagination"></div>
+      <!--  -->
+
     </div>
   </section>
+  <!--Menu inicial-->
+
   <!--Categirias-->
   <section class="section category">
     <h2 class="section__title">
-      Crea Poyectos <br />
-      Como:
+      Crea Proyectos con:
     </h2>
-
     <div class="category__container container grid">
       <div class="category__data">
-        <img src="assets/img/category1-img.png" alt="" class="category__img" />
-        <h3 class="category__title">Fantasmas</h3>
+        <img src="assets/img/ic-html.png" alt="" class="category__img" />
+        <h3 class="category__title">HTML</h3>
         <p class="category__description">
-          Choose the ghosts, the scariest there are.
+          Lenguaje de marcado para páginas web.
+        </p>
+      </div>
+      <div class="category__data">
+        <img src="assets/img/ic-css.png" alt="" class="category__img" />
+        <h3 class="category__title">CSS</h3>
+        <p class="category__description">
+          Lenguaje para diseñar estilos web.
         </p>
       </div>
 
       <div class="category__data">
-        <img src="assets/img/category2-img.png" alt="" class="category__img" />
-        <h3 class="category__title">Calabazas</h3>
+        <img src="assets/img/ic-js.png" alt="" class="category__img" />
+        <h3 class="category__title">JAVASCRIPT</h3>
         <p class="category__description">
-          You look at the scariest pumpkins there is.
-        </p>
-      </div>
-
-      <div class="category__data">
-        <img src="assets/img/category3-img.png" alt="" class="category__img" />
-        <h3 class="category__title">Sombrero de bruja</h3>
-        <p class="category__description">
-          Pick the most stylish witch hats out there.
+          Lenguaje de programación web interactivo.
         </p>
       </div>
     </div>
   </section>
+
   <!--Acerca de-->
   <section class="section about" id="about">
     <div class="about__container container grid">
@@ -125,47 +142,46 @@
         </p>
         <a href="#" class="button"> Saber más</a>
       </div>
-
-      <img src="assets/img/about-img.png" alt="" class="about__img" />
+      <img src="assets/img/robot.png" alt="" class="about__img" />
     </div>
   </section>
-  <!--Truco o trato-->
-  <section class="section trick" id="trick">
-    <h2 class="section__title">Planes Disponibles</h2>
 
+  <!--PLANES-->
+  <section class="section trick" id="trick">
+    <h2 class="section__title">Planes Disponibles:</h2>
     <div class="trick__container container grid">
       <div class="trick__content">
-        <img src="assets/img/trick-treat1-img.png" alt="" class="trick__img" />
+        <img src="assets/img/plangratis.png" alt="" class="trick__img" />
         <h3 class="trick__title">Plan Gratuito</h3>
-        <span class="trick__subtitle">Candy</span>
-        <span class="trick__price">$11.99</span>
+        <span class="trick__subtitle">3 Proyectos</span>
+        <span class="trick__price">$0.00</span>
         <button class="button trick__button">
           <i class="bx bx-cart-alt trick__icon"></i>
         </button>
       </div>
 
       <div class="trick__content">
-        <img src="assets/img/trick-treat2-img.png" alt="" class="trick__img" />
+        <img src="assets/img/plansilver.png" alt="" class="trick__img" />
         <h3 class="trick__title">Plan Silver</h3>
-        <span class="trick__subtitle">Accessory</span>
-        <span class="trick__price">$8.99</span>
+        <span class="trick__subtitle">10 Proyectos</span>
+        <span class="trick__price">$3.99</span>
         <button class="button trick__button">
           <i class="bx bx-cart-alt trick__icon"></i>
         </button>
       </div>
 
       <div class="trick__content">
-        <img src="assets/img/trick-treat3-img.png" alt="" class="trick__img" />
+        <img src="assets/img/plangold.png" alt="" class="trick__img" />
         <h3 class="trick__title">Plan Gold</h3>
-        <span class="trick__subtitle">Accessory</span>
-        <span class="trick__price">$15.99</span>
+        <span class="trick__subtitle">Proyectos Ilimitadaos</span>
+        <span class="trick__price">$9.99</span>
         <button class="button trick__button">
           <i class="bx bx-cart-alt trick__icon"></i>
         </button>
       </div>
-
     </div>
   </section>
+
   <!--Descuentos-->
   <section class="section discount">
     <div class="discount__container container grid">
@@ -175,51 +191,43 @@
 
           Si adquiere tu plan el dia de hoy!!
         </h2>
-        <a href="#" class="button">Registrarse</a>
+        <a href="#" class="button" [routerLink]="['/register']" routerLinkActive="router-link-active">Registrarse</a>
       </div>
 
-      <img src="assets/img/discount-img.png" alt="" class="discount__img" />
+      <img src="assets/img/logoed.png" alt="" class="discount__img" />
     </div>
   </section>
+
   <!--Nuevos items-->
   <section class="section new" id="new">
-    <h2 class="section__title">Desarrolladores</h2>
-
+    <h2 class="section__title">
+      Desarrolladores:
+    </h2>
     <div class="new__container container">
-      <div class="swiper new-swiper">
-        <div class="swiper-wrapper">
-          <div class="new__content swiper-slide">
-            <div class="new__tag">New</div>
-            <img src="assets/img/new1-img.png" alt="" class="new__img" />
-            <h3 class="new__title">Haunted House</h3>
-            <span class="new__subtitle">Accessory</span>
-
-            <div class="new__prices">
-              <span class="new__price">$14.99</span>
-              <span class="new__discount">$29.99</span>
-            </div>
-
-            <button class="button new__button">
-              <i class="bx bx-cart-alt new__icon"></i>
-            </button>
+      <div class="containertar">
+        <div class="box">
+          <b></b>
+          <img src="assets/img/profile_image.jpg" alt="profile image">
+          <div class="content">
+            <h2>Edgardo Ramirez <br><span>Desarrollador Web</span></h2>
+            <ul class="sci">
+              <li><a href="#"><i class="bx bxl-home"></i></a></li>
+              <li><a href="#"><i class="bx bxl-instagram-alt"></i></a></li>
+              <li><a href="#"><i class="bx bxl-github"></i></a></li>
+            </ul>
           </div>
-
-          <div class="new__content swiper-slide">
-            <div class="new__tag">New</div>
-            <img src="assets/img/new2-img.png" alt="" class="new__img" />
-            <h3 class="new__title">Halloween Candle</h3>
-            <span class="new__subtitle">Accessory</span>
-
-            <div class="new__prices">
-              <span class="new__price">$11.99</span>
-              <span class="new__discount">$21.99</span>
-            </div>
-
-            <button class="button new__button">
-              <i class="bx bx-cart-alt new__icon"></i>
-            </button>
+        </div>
+        <div class="box">
+          <b></b>
+          <img src="assets/img/profile_image.jpg" alt="profile image">
+          <div class="content">
+            <h2>Josue padilla <br><span>Desarrollador Web</span></h2>
+            <ul class="sci">
+              <li><a href="#"><i class="bx bxl-facebook"></i></a></li>
+              <li><a href="#"><i class="bx bxl-instagram-alt"></i></a></li>
+              <li><a href="#"><i class="bx bxl-github"></i></a></li>
+            </ul>
           </div>
-
         </div>
       </div>
     </div>
@@ -239,12 +247,13 @@
     </div>
   </section>
 </main>
+
 <!--Pie de pagina-->
 <footer class="footer section">
   <div class="footer__container container grid">
     <div class="footer__content">
       <a href="#" class="footer__logo">
-        <img src="assets/img/logo.png" alt="" class="footer__logo-img" />
+        <img src="assets/img/logoed.png" alt="" class="footer__logo-img" />
         Noûs Collab
       </a>
 
@@ -313,11 +322,9 @@
   </div>
 
   <span class="footer__copy">&#169; NoûsCollab 2023</span>
-
-  <img src="assets/img/footer1-img.png" alt="" class="footer__img-one" />
-  <img src="assets/img/footer2-img.png" alt="" class="footer__img-two" />
 </footer>
 <!-- #endregion -->
-<a href="#" class="scrollup" id="scroll-up">
+
+<a href="#home" class="scrollup" id="scroll-up">
   <i class="bx bx-up-arrow-alt scrollup__icon"></i>
 </a>

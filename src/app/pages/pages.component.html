@@ -2,31 +2,15 @@
 
     <app-header></app-header>
 
-    <app-sidebar></app-sidebar>
+    <div class="principal" style="display: flex; ">
+    <app-sidebar style=" width: 10%"></app-sidebar>
 
-    <div class="page-wrapper">
+    <div style=" width: 90%">
         <div class="container-fluid">
-            <!-- Breadcrumbs -->
-            <!-- <app-breadcrumbs></app-breadcrumbs> -->
-
             <!-- Mi sistema de rutas -->
             <router-outlet></router-outlet>
-
-            <!-- 
-            <div class="row">
-                <div class="col-12">
-                    <div class="card">
-                        <div class="card-body">
-                            
-                        </div>
-                    </div>
-                </div>
-            </div> 
-            -->
-
         </div>
-
     </div>
-
+    </div>
 
 </div>
