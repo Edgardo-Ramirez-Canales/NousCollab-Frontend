@@ -48,7 +48,7 @@
     "editor.selectionBackground": "#3247b1cf" /* al seleccionar */,
     "editor.selectionHighlightBackground": "#29abe2",
     "editorLineNumber.foreground": "#a6a6a6" /* color de numero de linea */,
-    "activityBar.background": "#116bd1" /* BARRA LATERAL */,
+    "activityBar.background": "#11d1c14c" /* BARRA LATERAL */,
     "titleBar.activeBackground": "#0707078a" /* BARRA SUPERIOR */,
     "titleBar.activeForeground": "#29abe2"
   },
