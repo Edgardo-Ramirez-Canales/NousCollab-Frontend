@@ -1,195 +1,111 @@
-@use postcss-preset-env {
-  stage: 0;
+
+.container {
+  display: flex;
+  align-content: center;
+  justify-content: center;
 }
-
-/* ---------- GENERAL ---------- */
-* {
-  box-sizing: inherit;
-}
-
-html {
-  box-sizing: border-box;
-}
-
-body {
-  background-color: #c0c0c0;
-  font-family: 'Varela Round', sans-serif;
-  line-height: 1.5;
-  margin: 0;
-  min-block-size: 80vh;
-  padding: 4vmin;
-  font-family: 'Poppins', sans-serif;
-}
-
-h2 {
-  font-size: 1.75rem;
-}
-
-input {
-  background-image: none;
-  border: none;
-  font: inherit;
-  margin: 0;
-  padding: 0;
-  transition: all 0.3s;
-}
-
-svg {
-  height: auto;
-  max-width: 100%;
-  vertical-align: middle;
-}
-
-/* ---------- ALIGN ---------- */
-.align {
-  display: grid;
-  place-items: center;
-}
-
-/* ---------- BUTTON ---------- */
-
-.fb {
-  background-color: #3B5998;
-  color: white;
-}
-
-input,
-.btn {
-  width: 100%;
-  padding: 7px;
-  border: none;
-  border-radius: 4px;
-  margin: 5px 0;
-  opacity: 0.85;
-  display: inline-block;
-  font-size: 17px;
-  line-height: 20px;
-  text-decoration: none;
-  transition: .3s;
+.formWraper {
+  display: flex;
+  width: 90%;
+  height: 450px;
+  background-color: transparent;
+  margin-top: 5px;
+  margin-left: 140px;
+  border-radius: 10px;
+  box-shadow: 0px 0px 20px rgba(27, 26, 26, 0.751);
   
 }
-
-.texto-fb{
-  vertical-align: middle;
-  margin-left: 6px;
+/* left sectin of form */
+.formDiv {
+  width: 50%;
+  padding: 8%;
+  background-color: #ca301583;
+  text-align: center;
+  border-radius: 10px 0px 0px 10px;
+}
+.formDiv h2 {
+  color: #e6e3e9f1;
+  margin-top: -5px;
 }
 
-.imagen-fb{
-  max-width: 25px;
-  vertical-align: middle;
+/*  right section */
+.welcomeDiv {
+  width: 50%;
+  padding: 10px;
+  background-color: transparent;
+  background-size: cover;
+  text-align: center;
+  color: white;
 }
-
-input:hover,
-.btn:hover {
-  opacity: 1;
+.welcomeDiv h2 {
+  margin-top: 150px;
 }
-
-.button {
-  background-color: hsl(var(--hue), 91%, 54%);
-  color: #fff;
-  cursor:pointer;
-  padding: 1rem 1.75rem;
-  border-radius: .5rem;
-  transition: .3s;
+.text {
+  font-size: small;
 }
-
-.button:focus,
-.button:hover {
-  background-color: hsl(var(--hue), 91%, 40%);
-}
-
-/* ---------- ICONS ---------- */
-.icons {
-  display: none;
-}
-
-.icon {
-  fill: currentcolor;
-  display: inline-block;
-  height: 1em;
-  width: 1em;
-}
-
-/* ---------- LOGIN ---------- */
-
-.link-r:hover{
-  text-decoration: underline;
-}
-
-.login {
-  width: 400px;
-  max-width: 100%;
-}
-
-.login__header {
-  background-color: linear-gradient(315deg,#ff8e03b2,#050505c5);
-  border-top-left-radius: 1.25em;
-  border-top-right-radius: 1.25em;
-  color: #fff;
-  padding: 1.25em 1.625em;
-  box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.445);
-}
-
-.login__header :first-child {
-  margin-top: 0;
-}
-
-.login__header :last-child {
-  margin-bottom: 0;
-}
-
-.login h2 .icon {
-  margin-right: 14px;
-}
-
-.login__form {
-  background-color: #fff;
-  border-bottom-left-radius: 1.25em;
-  border-bottom-right-radius: 1.25em;
-  color: #777;
-  display: flex;
-  flex-direction: column;
-  gap: 0.875em;
-  padding: 1.25em 1.625em;
-  box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
-}
-
-.login input {
-  border-radius: 0.1875em;
-}
-
-.login input[type="email"],
-.login input[type="password"] {
-  background-color: #eee;
-  color: #777;
-  padding: 0.5em;
+/* input fields */
+.formGroup {
   width: 100%;
-  border-radius: 0.1875em;
-  border: none;
+  position: relative;
+}
+.formGroup input {
+  width: 90%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border-style: none;
+  padding-left: 30px !important;
 }
 
-.login input[type="submit"] {
-  margin-top: 1em;
-  padding: 0.75em 1.5em;
-  background-color: hsl(var(--hue), 91%, 54%);
-  color: #fff;
-  cursor:pointer;
+/* icons inside form */
+.formGroup i {
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  color: rgb(61, 31, 2);
+  font-size: 13px;
+  margin: 10px !important;
 }
 
-@media screen and (max-width: 768px) {
-  body {
-    padding: 2vmin;
-  }
+input::placeholder {
+  position: relative;
+  left: 10px;
+}
+input:focus {
+  border-color: white;
+}
+.checkBox {
+  width: 100%;
+  margin-top: 2px;
+}
+.btn {
+  width: 70%;
+  padding: 15px;
+  background-color: #2d1301;
+  margin-top: 20px;
+  color: #d5d2cf;
+  border-radius: 15px;
+  border-style: none;
+}
 
-  .login {
-    width: 100%;
+/* hover efects */
+.btn:hover {
+  background-color: white;
+  color: black;
+}
+/* making HTML registration form responsive to mobile devices */
+@media screen and (max-width: 1000px) {
+  .formWraper {
+    width: 98%;
+    margin-left: auto;
+    margin-right: auto;
   }
-
-  .login__header {
-    border-radius: 0;
+}
+@media screen and (max-width: 670px) {
+  .formDiv {
+    width: 120%;
+    border-radius: 10px;
   }
-
-  .login__form {
-    border-radius: 0;
+  .welcomeDiv {
+    display: none;
   }
 }

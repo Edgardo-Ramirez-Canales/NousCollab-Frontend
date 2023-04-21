@@ -9,13 +9,10 @@ import { ComponentsModule } from '../components/components.module';
 import { ProyectComponent } from './proyect/proyect.component';
 import { ProyectsComponent } from './proyects/proyects.component';
 import { PerfilComponent } from './perfil/perfil.component';
+import { CreateProjectComponent } from './create-project/create-project.component';
 import { PagesComponent } from './pages.component';
 
-
-
 import { HighlightModule, HIGHLIGHT_OPTIONS } from 'ngx-highlightjs';
-
-
 
 @NgModule({
   declarations: [
@@ -23,12 +20,14 @@ import { HighlightModule, HIGHLIGHT_OPTIONS } from 'ngx-highlightjs';
     ProyectsComponent,
     PerfilComponent,
     PagesComponent,
+    CreateProjectComponent,
   ],
   exports: [
     ProyectComponent,
     ProyectsComponent,
     PerfilComponent,
     PagesComponent,
+    CreateProjectComponent,
   ],
 
   imports: [

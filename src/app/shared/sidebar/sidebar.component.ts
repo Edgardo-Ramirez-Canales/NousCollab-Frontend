@@ -20,6 +20,7 @@ export class SidebarComponent implements OnInit {
     {
       icon: 'bx-add-to-queue',
       text: 'Crear Proyecto',
+      link: '/nousCollab/createProyect',
       active: false,
       hoverColor: '',
     },

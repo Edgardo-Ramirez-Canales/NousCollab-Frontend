@@ -4,6 +4,7 @@ import { Routes, RouterModule } from '@angular/router';
 import { ProyectComponent } from './proyect/proyect.component';
 import { ProyectsComponent } from './proyects/proyects.component';
 import { PerfilComponent } from './perfil/perfil.component';
+import { CreateProjectComponent } from './create-project/create-project.component';
 
 const childRoutes: Routes = [
   {
@@ -20,6 +21,11 @@ const childRoutes: Routes = [
     path: 'perfil',
     component: PerfilComponent,
     data: { titulo: 'Perfil de usuario' },
+  },
+  {
+    path: 'createProyect',
+    component: CreateProjectComponent,
+    data: { titulo: 'Crear Proyectos' },
   },
 ];
 

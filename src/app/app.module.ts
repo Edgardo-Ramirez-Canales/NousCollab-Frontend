@@ -12,7 +12,7 @@ import { landingComponent } from './landing/landing.component';
 /* import { ProyectComponent } from './page/proyect/proyect.component';
  */
 @NgModule({
-  declarations: [AppComponent, NopagefoundComponent, landingComponent],
+  declarations: [AppComponent, NopagefoundComponent, landingComponent,],
   imports: [BrowserModule, AppRoutingModule, PagesModule, AuthModule],
   providers: [],
   bootstrap: [AppComponent],

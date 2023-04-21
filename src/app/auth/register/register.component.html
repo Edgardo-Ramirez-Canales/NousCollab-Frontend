@@ -1,6 +1,4 @@
 <body>
-
-
   <form class="form-horizontal form-material" 
         id="loginform" 
         autocomplete="off" 
@@ -20,7 +18,7 @@
                       name="name" 
                       id="name" 
                       placeholder="Nombre de usuario"
-                      formControlName="nombre">
+                      formControlName="name">
               </div>
 
               <div class="formGroup">
@@ -43,7 +41,8 @@
 
               <div class="formGroup">
                 <i class="fas fa-lock"></i>
-                <input type="password" name="password" id="password" placeholder="Confirme Contraseña" formControlName="password2">
+                <input type="password" name="password" id="password" placeholder="Confirme Contraseña" formControlName="password2"
+                >
               </div>
               <!---end of fill up form-->
 
@@ -55,12 +54,11 @@
 
               <div class="row">
                 <div class="col text-danger">
-              
-                  <p *ngIf="campoNoValido('nombre')">* El nombre es obligatorio</p>
-                  <p *ngIf="campoNoValido('email')">* El email es obligatorio y tiene que ser válido</p>
-                  <p *ngIf="contrasenasNoValidas()">* Las contraseñas deben de ser iguales</p>
-                  <p *ngIf="aceptaTerminos()">* Debe de aceptar los términos de uso</p>
-              
+                  <p *ngIf="campoNoValido('name')">Nombre de usuario obligatorio</p>
+                  <p *ngIf="campoNoValido('email')">Email es obligatorio y ser valido</p>
+                  <p *ngIf="campoNoValido('password')">La Contraseña es obligatoria</p>
+                  <p *ngIf="contrasenasNoValidas()">Las contraseñas deben de ser iguales</p>
+                  <p *ngIf="aceptaTerminos()">Debe de aceptar los términos de uso</p>
                 </div>
               </div>
               <!--submit button-->
@@ -73,7 +71,6 @@
               <p class="text">
               </p>
           </div>
-
         </div>
       </div>
   </form>>
