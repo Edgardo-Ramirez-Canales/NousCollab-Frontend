@@ -1,0 +1,84 @@
+/* ---------- GENERAL ---------- */
+
+body {
+  line-height: 1.5;
+  margin: 3px;
+  min-block-size: 80vh;
+  padding: 3vmin;
+}
+
+h2 {
+  font-size: 1.75rem;
+}
+
+/* ---------- ALIGN ---------- */
+.align {
+  display: grid;
+  place-items: center;
+}
+
+/* ---------- BUTTON ---------- */
+.button {
+  background-color: hsl(var(--hue), 91%, 54%);
+  color: #fff;
+  cursor: pointer;
+  border-radius: 0.5rem;
+  transition: 0.3s;
+  height: 40px;
+  width: 10%;
+  max-width: 220px;
+  position: absolute;
+  right: 3.5%;
+}
+
+.button:focus,
+.button:hover {
+  background-color: hsl(var(--hue), 91%, 40%);
+}
+
+/* ---------- ICONS ---------- */
+.img-p {
+  width: 40px;
+}
+h2 {
+  margin-left: 7px;
+}
+
+/* ---------- SPACE ---------- */
+
+.projects {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-content: flex-start;
+}
+
+.space {
+  width: 98%;
+}
+
+.projects__header {
+  background-color: #0c0c0cc4;
+  border-top-left-radius: 1.25em;
+  border-top-right-radius: 1.25em;
+  color: #fff;
+  padding: 1.20em 1.625em;
+  box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
+  display: flex;
+  margin-top: 10px;
+}
+
+.projects__header :first-child {
+  margin-top: 0px;
+}
+
+.projects__header :last-child {
+  margin-bottom: 0;
+}
+
+.projects {
+  background-color: #ffffff;
+  border-bottom-left-radius: 1.25em;
+  border-bottom-right-radius: 1.25em;
+  height: 400px;
+}

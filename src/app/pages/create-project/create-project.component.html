@@ -1,1 +1,52 @@
-<p>create-project works!</p>
+<section class="align">
+
+  <div class="space">
+
+    <header class="projects__header">
+      <img src="https://i.ibb.co/58kfYG8/gestion-de-proyectos.png" alt="Crear proyectos" border="0" class="img-p">
+      <h2>Crear Proyecto</h2>
+      <input class="button" type="submit" value="Guardar" [routerLink]="['/nousCollab/createProyect']">
+    </header>
+
+      <main>
+        <section class="section-contact">
+          <div class="container">
+            <!--start of contact form-->
+            <form>
+              <!--first name input-->
+              <div class="form-group">
+                <label for="firstname">Nombre Proyecto</label>
+                <input type="text" name="firstname" id="firstname" required class="form-element" placeholder="Iron" />
+              </div>
+              <!--last name input-->
+              <div class="form-group">
+                <label for="lastname">Last name*</label>
+                <input type="text" name="lastname" id="lastname" required class="form-element" placeholder="Man" />
+              </div>
+              <!--email input-->
+              <div class="form-group">
+                <label for="email">Email address*</label>
+                <input type="email" name="email" id="email" required class="form-element"
+                  placeholder="iron.man@example.com" />
+              </div>
+              <div class="form-group">
+                <label for="company">Company</label>
+                <input type="text" name="company" id="company" class="form-element" placeholder="Stark Tower" />
+              </div>
+              <div class="form-group full">
+                <label for="message">Descripcion de Proyecto</label>
+                <textarea name="message" id="message" class="form-element"
+                  placeholder="I want to find out about..."></textarea>
+              </div>
+              <div class="submit-group">
+                <input type="submit" value="Crear Proyecto" />
+              </div>
+            </form>
+          </div>
+        </section>
+      </main>
+
+  </div>
+
+
+</section>
