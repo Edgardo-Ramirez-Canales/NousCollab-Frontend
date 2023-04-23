@@ -5,38 +5,54 @@
     <header class="projects__header">
       <img src="https://i.ibb.co/58kfYG8/gestion-de-proyectos.png" alt="Crear proyectos" border="0" class="img-p">
       <h2>Crear Proyecto</h2>
-      <input class="button" type="submit" value="Guardar" [routerLink]="['/nousCollab/createProyect']">
     </header>
+
+    <!-- <tr *ngFor="let project of projects">
+      <img [src]="project.image" />
+      <td>{{project.name}}---</td>
+      <td>{{project.description}}--</td>
+      <td>{{project.image}}</td>
+    </tr> -->
 
       <main>
         <section class="section-contact">
           <div class="container">
             <!--start of contact form-->
-            <form>
-              <!--first name input-->
+            <form
+               id="projectform" 
+               autocomplete="off" 
+               [formGroup]="projectForm"
+               (ngSubmit)="crearProject()">
+
+              <!-- name -->
               <div class="form-group">
-                <label for="firstname">Nombre Proyecto</label>
-                <input type="text" name="firstname" id="firstname" required class="form-element" placeholder="Iron" />
+                <label for="name">Nombre Proyecto</label>
+                <input type="text" 
+                       name="name" id="name" 
+                       required class="form-element" 
+                       placeholder="" 
+                       formControlName="nameProject"/>
               </div>
-              <!--last name input-->
+              <!--image-->
               <div class="form-group">
-                <label for="lastname">Last name*</label>
-                <input type="text" name="lastname" id="lastname" required class="form-element" placeholder="Man" />
+                <label for="image" >Imagen</label>
+                <input type="file" 
+                       name="image" 
+                       id="image" 
+                       required class="form-element" 
+                       placeholder=""
+                     class="drop-container"
+                      (change)="onImageSelected($event)" accept=".jpg,.png,.jpeg" />
               </div>
-              <!--email input-->
-              <div class="form-group">
-                <label for="email">Email address*</label>
-                <input type="email" name="email" id="email" required class="form-element"
-                  placeholder="iron.man@example.com" />
-              </div>
-              <div class="form-group">
-                <label for="company">Company</label>
-                <input type="text" name="company" id="company" class="form-element" placeholder="Stark Tower" />
-              </div>
+              <!--description-->
               <div class="form-group full">
-                <label for="message">Descripcion de Proyecto</label>
-                <textarea name="message" id="message" class="form-element"
-                  placeholder="I want to find out about..."></textarea>
+                <label for="description" >Descripcion de Proyecto</label>
+                <textarea name="description" 
+                          id="description" 
+                          class="form-element"
+                          placeholder="Escribe una pequeña descripcion de tu proyecto..."
+                          formControlName="description">
+                 </textarea>
               </div>
               <div class="submit-group">
                 <input type="submit" value="Crear Proyecto" />

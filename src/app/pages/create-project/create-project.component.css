@@ -86,13 +86,7 @@ h2 {
 /* dddddddd */
 /*  */
 /*for the entire page*/
-* {
-	margin: 0;
-	padding: 0;
-	-webkit-box-sizing: border-box;
-	box-sizing: border-box;
-	font-family: sans-serif;
-}
+
 
 /*contact form section*/
 .section-contact {
@@ -109,6 +103,7 @@ h2 {
 	margin: 0 auto;
 	padding-left: 32px;
 	padding-right: 32px
+	
 }
 
 /* makes contact form responsive */
@@ -132,6 +127,7 @@ h2 {
 	text-transform: uppercase;
 	text-align: center;
 	margin-bottom: 16px
+	
 }
 
 .section-contact .container p {
@@ -229,3 +225,31 @@ h2 {
 .section-contact .container form .submit-group input[type="submit"]:active {
 	background-color: black;
 }
+
+
+/* 		 */
+
+
+
+.drop-container {
+  
+  padding: 10px;
+  border-radius: 10px;
+  border: 2px dashed rgb(255, 206, 171);
+  color: #444;
+  cursor: pointer;
+  transition: background .2s ease-in-out, border .2s ease-in-out;
+	width: 88%;
+	height: 55%;
+}
+
+.drop-container:hover {
+  background: rgba(255, 106, 0, 0.591);
+  border-color: rgba(137, 90, 13, 0.616);
+}
+
+
+
+
+
+

@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
+import { ReactiveFormsModule } from '@angular/forms';
 
 /* Modulos */
 import { SharedModule } from '../shared/shared.module';
@@ -36,6 +37,7 @@ import { HighlightModule, HIGHLIGHT_OPTIONS } from 'ngx-highlightjs';
     RouterModule,
     ComponentsModule,
     HighlightModule,
+    ReactiveFormsModule,
   ],
   providers: [
     {
