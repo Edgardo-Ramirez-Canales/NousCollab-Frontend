@@ -4,16 +4,65 @@
 
     <header class="projects__header">
       <img src="https://i.ibb.co/58kfYG8/gestion-de-proyectos.png" alt="Crear proyectos" border="0" class="img-p">
-      <h2>Perfil</h2>
-      <input class="button" type="submit" value="Guardar" [routerLink]="['/nousCollab/createProyect']">
+      <h2>Perfil Usuario</h2>
     </header>
 
-    <div class="projects">
+        <section class="section-contact">
+          <div class="container">
+            <form id="projectform" autocomplete="off" >
+              
+              <div class="form-group">
+                <label for="name">Nombre de Usuario</label>
+                <input type="text" name="name" id="name" required class="form-element"
+                  formControlName="name" />
+              </div>
+              
+              <div class="form-group">
+                <label for="image">Correo</label>
+                <input type="text" name="email" id="email" required class="form-element" />
+              </div>
 
+              <div class="form-group">
+                <label for="image">Imagen de Perfil</label>
+                <input type="file" name="image" id="image" required class="form-element" placeholder="" class="drop-container" accept=".jpg,.png,.jpeg" />
+              </div>
 
+              <div class="form-group">
+                <label for="name">Tipo de Plan</label>
+                <input type="text" name="email" id="email" required class="form-element" formControlName="email" />
+                <select class="form-element" id="dropdown">
+                  <option>Yeah, totally</option>
+                  <option>Extra funny</option>
+                  <option>It's so funny i'm gonna cry</option>
+                  <option>A bit, yes</option>
+                  <option>Maaaybe</option>
+                </select>
+              </div>
+              
+              <div class="submit-group">
+                <input type="submit" value="Actualizar" />
+              </div>
+            </form>
+          </div>
 
-    </div>
-
+          <div class="card">
+            <div class="infos">
+              <div class="image"></div>
+              <div class="info">
+                <div>
+                  <p class="name">Edgardo</p>
+                  <p class="function">Correo</p>
+                </div>
+                <div class="stats">
+                  <p class="flex flex-col">Proyectos<span class="state-value">34</span></p>
+                  <p class="flex">Membresia<span class="state-value">455</span></p>
+                </div>
+              </div>
+            </div>
+            <button class="request" type="button">Crear Proyecto</button>
+            <button class="request" type="button">Mis Proyectos</button>
+            <button class="request" type="button">Eliminar Cuenta</button>
+          </div>
+        </section>
   </div>
-
 </section>

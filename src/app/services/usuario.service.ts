@@ -8,19 +8,23 @@ import { tap, map, catchError } from 'rxjs/operators';
 
 import { environment } from 'src/environments/environment';
 
+import { Usuario } from "../models/usuario.model";
+
 const base_url = environment.base_url;
 
 @Injectable({
   providedIn: 'root',
 })
 export class UsuarioService {
+  
+
   constructor(
     private http: HttpClient,
     private router: Router,
     private ngZone: NgZone
-  ) { }
-  
-  validarToken():boolean {
+  ) {}
+
+  validarToken(): boolean {
     const token = localStorage.getItem('access_token') || '';
     return !!token;
   }
@@ -34,6 +38,7 @@ export class UsuarioService {
       tap((resp: any) => {
         localStorage.setItem('access_token', resp.access_token);
         localStorage.setItem('info_user', JSON.stringify(resp.user));
+        console.log(resp);
       })
     );
   }

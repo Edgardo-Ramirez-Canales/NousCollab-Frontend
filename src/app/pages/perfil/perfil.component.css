@@ -1,39 +1,11 @@
-/* ---------- GENERAL ---------- */
-
-body {
-  line-height: 1.5;
-  margin: 3px;
-  min-block-size: 80vh;
-  padding: 3vmin;
-}
 
 h2 {
   font-size: 1.75rem;
 }
-
 /* ---------- ALIGN ---------- */
 .align {
   display: grid;
   place-items: center;
-}
-
-/* ---------- BUTTON ---------- */
-.button {
-  background-color: hsl(var(--hue), 91%, 54%);
-  color: #fff;
-  cursor: pointer;
-  border-radius: 0.5rem;
-  transition: 0.3s;
-  height: 40px;
-  width: 10%;
-  max-width: 220px;
-  position: absolute;
-  right: 3.5%;
-}
-
-.button:focus,
-.button:hover {
-  background-color: hsl(var(--hue), 91%, 40%);
 }
 
 /* ---------- ICONS ---------- */
@@ -45,16 +17,8 @@ h2 {
 }
 
 /* ---------- SPACE ---------- */
-
-.projects {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-content: flex-start;
-}
-
 .space {
-  width: 98%;
+  width: 96%;
 }
 
 .projects__header {
@@ -68,17 +32,247 @@ h2 {
   margin-top: 10px;
 }
 
-.projects__header :first-child {
-  margin-top: 0px;
+/*contact form section*/
+.section-contact {
+	min-height: 74vh;
+	padding-top: 30px;
+	background-image: linear-gradient(175deg,#ff67082c, #f35608ef);
+	display: flex;
 }
 
-.projects__header :last-child {
-  margin-bottom: 0;
+/*contact form container*/
+.section-contact .container {
+	max-width: 1080px;
+  margin-left: -90px;
+	margin-right: -90px;
 }
 
-.projects {
-  background-color: #ffffff;
-  border-bottom-left-radius: 1.25em;
-  border-bottom-right-radius: 1.25em;
-  height: 400px;
+/* makes contact form responsive */
+@media (min-width: 600px) {
+	.section-contact .container {
+		padding-left: 64px;
+		padding-right: 64px
+	}
+}
+
+@media (min-width: 1024px) {
+	.section-contact .container {
+		padding-left: 128px;
+		padding-right: 128px
+	}
+}
+
+.section-contact .container h1 {
+	color: #302c2c;
+	font-size: 36px;
+	text-transform: uppercase;
+	text-align: center;
+	margin-bottom: 16px
+	
+}
+
+.section-contact .container p {
+	color: #302c2c;
+	font-size: 18px;
+	line-height: 1.5;
+	margin-bottom: 32px
+}
+
+.section-contact .container form {
+	display: -ms-grid;
+	display: grid;
+	-ms-grid-columns: 1fr;
+	grid-template-columns: 1fr;
+	grid-gap: 16px;
+	background-color: #FFF;
+	padding: 32px;
+	border-radius: 16px;
+	-webkit-box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.2);
+	box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.2)
+}
+
+@media (min-width: 768px) {
+	.section-contact .container form {
+		-ms-grid-columns: (1fr)[2];
+		grid-template-columns: repeat(2, 1fr)
+	}
+}
+
+.section-contact .container form .form-group.full {
+	grid-column: 1 / -1
+}
+
+.section-contact .container form .form-group label {
+	display: block;
+	margin-bottom: 5px;
+	color: black;
+	font-size: 14px
+}
+
+.section-contact .container form .form-group .form-element {
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	appearance: none;
+	outline: none;
+	border: none;
+	display: block;
+	width: 100%;
+	border-radius: 8px;
+	padding: 12px 16px;
+	background-color: #F3F3F3;
+	-webkit-transition: 0.4s;
+	transition: 0.4s
+}
+
+/* when u click into the form field it highlights a differnet colour */
+.section-contact .container form .form-group .form-element:focus {
+	-webkit-box-shadow: 0px 0px 6px rgba(0, 0, 0, 0.2);
+	box-shadow: 0px 0px 6px rgba(0, 0, 0, 0.2);
+	background-color: white;
+}
+
+.section-contact .container form .form-group textarea {
+	resize: none;
+	min-height: 100px
+}
+
+.section-contact .container form .submit-group {
+	grid-column: 1 / -1;
+	text-align: right
+}
+
+/*send message button*/
+.section-contact .container form .submit-group input[type="submit"] {
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	appearance: none;
+	border: none;
+	outline: none;
+	background: none;
+	padding: 12px 16px;
+	background-color: #eb6a08;
+	border-radius: 8px;
+	color: #FFF;
+	cursor: pointer;
+	-webkit-transition: 0.4s;
+	transition: 0.4s
+}
+
+/*submit button hover */
+.section-contact .container form .submit-group input[type="submit"]:hover {
+	background-color: #000000;
+}
+
+.section-contact .container form .submit-group input[type="submit"]:active {
+	background-color: black;
+}
+
+
+/* 		 */
+.drop-container {
+  padding: 10px;
+  border-radius: 10px;
+  border: 2px dashed rgb(255, 206, 171);
+  color: #444;
+  cursor: pointer;
+  transition: background .2s ease-in-out, border .2s ease-in-out;
+	width: 98%;
+	height: 55%;
+}
+
+.drop-container:hover {
+  background: rgba(255, 106, 0, 0.591);
+  border-color: rgba(137, 90, 13, 0.616);
+}
+/*  */
+.card {
+  max-width: 350px;
+  border-radius: 1rem;
+  background-color: rgba(190, 102, 7, 0.078);
+  padding: 1rem;
+  margin-left: -29px;
+	margin-right:10px ;
+}
+
+.infos {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  grid-gap: 1rem;
+  gap: 1rem;
+}
+
+.image {
+  height: 7rem;
+  width: 7rem;
+  border-radius: 0.5rem;
+  background-color: rgb(194, 107, 36);
+  background: linear-gradient(
+    to bottom right,
+    rgb(209, 88, 8),
+    rgba(186, 128, 240, 0.324)
+  );
+}
+
+.info {
+  height: 7rem;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.name {
+  font-size: 1.25rem;
+  line-height: 1.75rem;
+  font-weight: 500;
+  color: rgba(255, 255, 255, 1);
+}
+
+.function {
+  font-size: 0.75rem;
+  line-height: 1rem;
+  color: rgba(156, 163, 175, 1);
+}
+
+.stats {
+  width: 100%;
+  border-radius: 0.5rem;
+  background-color: rgba(255, 255, 255, 1);
+  padding: 0.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 0.75rem;
+  line-height: 1rem;
+  color: rgba(0, 0, 0, 1);
+}
+
+.flex {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0 4px;
+}
+
+.state-value {
+  font-weight: 700;
+  color: rgb(219, 72, 5);
+}
+
+.request {
+  margin-top: 1.5rem;
+  width: 100%;
+  border: 1px solid transparent;
+  border-radius: 0.5rem;
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  line-height: 1.5rem;
+  transition: all 0.3s ease;
+	;
+}
+
+.request:hover {
+  background-color: rgb(228, 113, 12);
+  color: #fff;
 }
