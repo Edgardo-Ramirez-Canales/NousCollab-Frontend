@@ -66,7 +66,15 @@ export class CreateProjectComponent implements OnInit {
 
     const imageFile: any = this.projectForm.get('image')!.value;
     if (!(imageFile instanceof File)) {
-      return;
+       Swal.fire({
+         position: 'center',
+         icon: 'error',
+         title: 'Verifique datos de proyecto',
+         text: 'Imagen obligatoria',
+         showConfirmButton: true,
+         confirmButtonColor: '#F65F3C',
+       });     
+      return 
     }
     // Llamar al servicio de carga de imágenes
     this.imageUploadServices.uploadImage(imageFile).subscribe(
