@@ -7,13 +7,26 @@ import {
 } from '@angular/core';
 import Split from 'split-grid';
 import { HighlightModule, HIGHLIGHT_OPTIONS } from 'ngx-highlightjs';
+import { Router } from '@angular/router';
+import { FormGroup, FormBuilder, Validators } from '@angular/forms';
+import { ProjectService } from '../../services/project.service';
+import { Project } from '../../models/projects.model';
 
+import { ActivatedRoute } from '@angular/router';
+import Swal from 'sweetalert2';
 @Component({
   selector: 'app-proyect',
   templateUrl: './proyect.component.html',
   styleUrls: ['./proyect.component.css'],
 })
 export class ProyectComponent implements AfterViewInit {
+  public projectEditForm!: FormGroup;
+  public projectSelect?: Project;
+  id: string = '';
+  /* css: string = '';
+  html: string = '';
+  javascript: string = ''; */
+
   @ViewChild('html') htmlElement!: ElementRef;
   @ViewChild('js') jsElement!: ElementRef;
   @ViewChild('css') cssElement!: ElementRef;
@@ -23,8 +36,104 @@ export class ProyectComponent implements AfterViewInit {
   highlightedCss = '';
   highlightedJs = '';
 
-  constructor(@Inject(HIGHLIGHT_OPTIONS) private highlightOptions: any) {
-    console.log(this.highlightOptions);
+  constructor(
+    @Inject(HIGHLIGHT_OPTIONS)
+    private highlightOptions: any,
+    private route: ActivatedRoute,
+    private fb: FormBuilder,
+    private router: Router,
+    private projectService: ProjectService
+  ) {
+    /* console.log(this.highlightOptions); */
+  }
+
+  ngOnInit() {
+    /* estos es nuevo */
+    this.id = this.route.snapshot.queryParamMap.get('id') ?? '';
+    /*  this.css = this.route.snapshot.queryParamMap.get('css') ?? '';
+    this.html = this.route.snapshot.queryParamMap.get('html') ?? '';
+    this.javascript = this.route.snapshot.queryParamMap.get('javascript') ?? ''; */
+
+    this.projectEditForm = this.fb.group({
+      html: ['', Validators.required],
+      css: ['', [Validators.required]],
+      javaScript: ['', [Validators.required]],
+    });
+
+    // Usa los valores de css, html y javascript para cargar y mostrar la información del proyecto
+    /*   console.log('ID del proyecto:', this.id);
+    console.log('CSS:', this.css);
+    console.log('HTML:', this.html);
+    console.log('JavaScript:', this.javascript); */
+
+    this.obtenerProject();
+  }
+  /* obtengo un solo proyect */
+  obtenerProject() {
+    this.projectService.cargarProjectPorId(this.id).subscribe((resp: any) => {
+      this.projectSelect = resp as Project;
+      console.log('mi proyecto loco', this.projectSelect);
+      console.log('this ', this.projectSelect.html);
+      // Cargar valores del proyecto en el formulario
+      this.projectEditForm.patchValue({
+        html: this.projectSelect.html,
+        css: this.projectSelect.css,
+        javaScript: this.projectSelect.javaScript,
+      });
+    });
+  }
+
+  /*Alert de exito  */
+  Toast = Swal.mixin({
+    toast: true,
+    position: 'top-end',
+    showConfirmButton: false,
+    timer: 2000,
+    timerProgressBar: true,
+    didOpen: (toast) => {
+      toast.addEventListener('mouseenter', Swal.stopTimer);
+      toast.addEventListener('mouseleave', Swal.resumeTimer);
+    },
+  });
+  /*  */
+  actualizarProject() {
+    console.log('actualizar');
+    console.log(this.projectEditForm.value);
+
+    
+    const formData = this.projectEditForm.value;
+
+    const html = formData.html ? formData.html.trim() : '';
+
+    const projectData: any = {
+      html,
+      css: formData.css,
+      javaScript: formData.javaScript,
+    };
+
+    this.projectService.actualizarProject(projectData, this.id).subscribe(
+      (resp) => {
+        console.log('Proyecto actualizado');
+        console.log(resp);
+        // Manejo de exito
+        this.Toast.fire({
+          icon: 'success',
+          title: 'Cambios Guardados Exitosamente',
+        });
+        /* this.router.navigateByUrl('/login'); */
+      },
+      (err) => {
+        //Manejo de errores
+        Swal.fire({
+          position: 'center',
+          icon: 'error',
+          title: 'Erros al Guardar Cambios',
+          text: err.error.message,
+          showConfirmButton: true,
+          confirmButtonColor: '#F65F3C',
+        });
+      }
+    );
   }
 
   ngAfterViewInit(): void {

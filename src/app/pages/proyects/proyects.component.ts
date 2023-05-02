@@ -1,5 +1,12 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { ProjectService } from '../../services/project.service';
+import { Project } from '../../models/projects.model';
+import { UsuarioService } from '../../services/usuario.service';
+import { Usuario } from '../../models/usuario.model';
+import { NavigationExtras } from '@angular/router';
 
+import { Router } from '@angular/router';
+import Swal from 'sweetalert2';
 
 interface Proyecto {
   id: number;
@@ -8,13 +15,33 @@ interface Proyecto {
   por: string;
 }
 
-
 @Component({
   selector: 'app-proyects',
   templateUrl: './proyects.component.html',
   styleUrls: ['./proyects.component.css'],
 })
-export class ProyectsComponent {
+export class ProyectsComponent implements OnInit {
+  public cargando: boolean = true;
+  public projects: Project[] = [];
+  usuario!: Usuario;
+
+  constructor(
+    private projectService: ProjectService,
+    public usuarioService: UsuarioService,
+    private router: Router
+  ) {
+    usuarioService.usuario.subscribe((usuario) => {
+      if (usuario) {
+        this.usuario = usuario;
+        /*  console.log('esta loco esto', this.usuario); */
+      }
+    });
+  }
+
+  ngOnInit(): void {
+    this.cargarMyProjects();
+  }
+
   proyectos: Proyecto[] = [
     {
       id: 1,
@@ -44,5 +71,31 @@ export class ProyectsComponent {
 
   cargarProyectos() {
     return this.proyectos;
+  }
+
+  cargarMyProjects() {
+    const usuarioId: string = this.usuario._id ?? '';
+    this.cargando = true;
+    this.projectService.cargarMyProjects(usuarioId).subscribe((resp) => {
+      this.cargando = false;
+      this.projects = resp as Project[];
+      /*  console.log('mis proyectos ddd', this.projects); */
+    });
+  }
+
+  editarProject(id: string) {
+    this.projectService.cargarProjectPorId(id).subscribe((resp: any) => {
+      const navigationExtras: NavigationExtras = {
+        queryParams: {
+          id: id,
+          /* css: resp.css,
+          html: resp.html,
+          javascript: resp.javaScript,  */
+        },
+      };
+      this.router.navigate(['/nousCollab/proyect'], navigationExtras);
+      console.log(id);
+      /*  console.log('css',resp.css); */
+    });
   }
 }

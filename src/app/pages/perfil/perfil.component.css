@@ -176,8 +176,8 @@ h2 {
   color: #444;
   cursor: pointer;
   transition: background .2s ease-in-out, border .2s ease-in-out;
-	width: 98%;
-	height: 55%;
+	width: 100%;
+	height: 115%;
 }
 
 .drop-container:hover {

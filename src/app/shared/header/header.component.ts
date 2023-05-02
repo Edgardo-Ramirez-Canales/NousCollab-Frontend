@@ -1,6 +1,7 @@
 
 import { Router } from '@angular/router';
 import { Component, OnInit } from '@angular/core';
+import { UsuarioService } from '../../services/usuario.service';
 declare var ScrollReveal: any;
 
 @Component({
@@ -9,7 +10,7 @@ declare var ScrollReveal: any;
   styleUrls: ['./header.component.css'],
 })
 export class HeaderComponent {
-  constructor(private router: Router) {}
+  constructor(private router: Router, private usuarioService: UsuarioService) {}
 
   ngOnInit(): void {
     const navMenu: HTMLElement | null = document.getElementById('nav-menu');
@@ -42,6 +43,10 @@ export class HeaderComponent {
       }
     }
     navLink.forEach((item) => item.addEventListener('click', linkAction));
+  }
 
+  /* Para cerrar Sesion */
+  logout() {
+    this.usuarioService.logout();
   }
 }

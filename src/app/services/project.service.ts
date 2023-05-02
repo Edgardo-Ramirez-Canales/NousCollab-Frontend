@@ -30,19 +30,27 @@ export class ProjectService {
     return this.http.get(url, this.headers);
   }
 
-  crearProject(formData: ProjectForm) { 
+  cargarMyProjects(id: string) {
+    const url = `${base_url}/project/myproyects/${id}`;
+    return this.http.get(url, this.headers);
+  }
+
+  cargarProjectPorId(id: string) {
+    const url = `${base_url}/project/${id}`;
+    return this.http.get(url, this.headers);
+  }
+
+  crearProject(formData: ProjectForm) {
     const url = `${base_url}/project`;
     return this.http.post(url, formData, this.headers);
   }
 
-  
-
-  actualizarProject(formData: ProjectForm, id: string) { 
+  actualizarProject(formData: ProjectForm, id: string) {
     const url = `${base_url}/project/update/${id}`;
     return this.http.put(url, formData, this.headers);
   }
 
-  eliminarProject(id: string) { 
+  eliminarProject(id: string) {
     const url = `${base_url}/project/delete/${id}`;
     return this.http.delete(url, this.headers);
   }

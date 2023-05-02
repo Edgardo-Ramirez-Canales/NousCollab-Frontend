@@ -64,7 +64,7 @@ export class LoginComponent implements OnInit {
         });
         //navegar a projects
         this.router.navigateByUrl('/nousCollab/proyects');
-        console.log(resp);  
+       /*  console.log(resp);   */
       },
       (err) => {
         // Si sucede un error

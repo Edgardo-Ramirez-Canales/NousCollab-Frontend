@@ -10,14 +10,14 @@
 
     <div class="projects">
 
-      <div *ngFor="let proyecto of cargarProyectos()">
+      <div  *ngFor="let project of projects">
         <div class="card">
-          <img src="https://i.ibb.co/09Dhfkh/carpeta.png" alt="carpeta" border="0" class="carpeta" [routerLink]="['/nousCollab/proyect']" routerLinkActive="router-link-active" >
+          <img src="https://i.ibb.co/09Dhfkh/carpeta.png" alt="carpeta" border="0" class="carpeta" (click)="editarProject(project._id!)" routerLinkActive="router-link-active" >
           <img src="https://i.ibb.co/FncN518/options.png" alt="options" border="0" class="opciones"
             title="Ver opciones">
           <img src="https://i.ibb.co/sVW73HX/sharing.png" alt="sharing" border="0" class="compartido"
-            *ngIf="proyecto.compartido" title="Compartido por {{proyecto.por}}">
-          <p class="nombre">{{proyecto.nombre}}</p>
+            *ngIf="true" title="Compartido por ">
+          <p class="nombre">{{project.nameProject}}</p>
         </div>
       </div>
 

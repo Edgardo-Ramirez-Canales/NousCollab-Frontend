@@ -18,7 +18,7 @@
           <a [routerLink]="['../nousCollab/snippets']"   class="nav__link">Snippets</a>
         </li>
         
-        <a [routerLink]="['/']"  class="button button--ghost">Salir</a>
+        <a (click)="logout()"  class="button button--ghost">Salir</a>
       </ul>
       <!-- boton responsive cuando este cerrado -->
       <div class="nav__close" id="nav-close">

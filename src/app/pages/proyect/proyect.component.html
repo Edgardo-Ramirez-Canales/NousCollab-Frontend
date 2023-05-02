@@ -1,24 +1,31 @@
 <div class="app">
-    <div class="grid">
-        <div>
-            <textarea name="" id="html" #html placeholder="html"></textarea>
-        </div>
+    <form id="projectEditform" autocomplete="off" [formGroup]="projectEditForm" 
+    (submit)="actualizarProject()">
 
-        <div>
-            <textarea name="" id="css" #css placeholder="css" highlight class=""></textarea>
+        <div class="grid">
+            <div>
+                <textarea name="" id="html" #html placeholder="html" formControlName="html"></textarea>
+            </div>
 
-        </div>
+            <div>
+                <textarea name="" id="css" #css placeholder="css" highlight class="" formControlName="css"></textarea>
 
-        <div>
-            <textarea name="" id="js" #js placeholder="js" highlight></textarea>
-        </div>
-        <div>
-            <iframe #iframe></iframe>
-        </div>
-        <div class="vertical-gutter"></div>
-        <div class="horizontal-gutter"></div>
+            </div>
 
-    </div>
+            <div>
+                <textarea name="" id="js" #js placeholder="js" highlight formControlName="javaScript"></textarea>
+            </div>
+            <div>
+                <iframe #iframe></iframe>
+            </div>
+            <div class="vertical-gutter"></div>
+            <div class="horizontal-gutter"></div>
+
+            <div class="submit-group" >
+                <input type="submit" value="Actualizar" />
+            </div>
+        </div>
+    </form>
 
 
 
