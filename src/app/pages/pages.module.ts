@@ -13,7 +13,9 @@ import { PerfilComponent } from './perfil/perfil.component';
 import { CreateProjectComponent } from './create-project/create-project.component';
 import { PagesComponent } from './pages.component';
 
-import { HighlightModule, HIGHLIGHT_OPTIONS } from 'ngx-highlightjs';
+
+import { FormsModule } from '@angular/forms';
+import { MonacoEditorModule } from 'ngx-monaco-editor';
 
 @NgModule({
   declarations: [
@@ -36,19 +38,10 @@ import { HighlightModule, HIGHLIGHT_OPTIONS } from 'ngx-highlightjs';
     SharedModule,
     RouterModule,
     ComponentsModule,
-    HighlightModule,
     ReactiveFormsModule,
+    FormsModule,
+    MonacoEditorModule.forRoot(),
   ],
-  providers: [
-    {
-      provide: HIGHLIGHT_OPTIONS,
-      useValue: {
-        fullLibraryLoader: () => import('highlight.js'),
-
-        themeUrl:
-          'https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.3.1/build/styles/github.min.css',
-      },
-    },
-  ],
+  providers: [],
 })
 export class PagesModule {}

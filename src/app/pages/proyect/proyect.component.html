@@ -1,32 +1,51 @@
+
+
 <div class="app">
-    <form id="projectEditform" autocomplete="off" [formGroup]="projectEditForm" 
-    (submit)="actualizarProject()">
+    <form id="projectEditform" autocomplete="off" [formGroup]="projectEditForm" (submit)="actualizarProject()">
 
         <div class="grid">
             <div>
-                <textarea name="" id="html" #html placeholder="html" formControlName="html"></textarea>
+               <!--  <textarea  id="html" #html placeholder="html" formControlName="html"></textarea> -->
+                <ngx-monaco-editor #htmlEditor class="theme" [options]="codeEditorOptions"  formControlName="html"
+                    (ngModelChange)="onChangeCode('html',$event)">
+                </ngx-monaco-editor>
             </div>
 
             <div>
-                <textarea name="" id="css" #css placeholder="css" highlight class="" formControlName="css"></textarea>
-
+               <!--  <textarea name="" id="css" #css placeholder="css" formControlName="css"></textarea> -->
+                <ngx-monaco-editor #htmlEditorCss class="theme" [options]="codeEditorOptionsCss" 
+                    formControlName="css" (ngModelChange)="onChangeCode('css',$event)">
+                </ngx-monaco-editor>
             </div>
 
             <div>
-                <textarea name="" id="js" #js placeholder="js" highlight formControlName="javaScript"></textarea>
+               <!--  <textarea name="" id="js" #js placeholder="js" formControlName="javaScript"></textarea> -->
+
+                <ngx-monaco-editor #htmlEditorJs class="themeb" [options]="codeEditorOptionsJs" 
+                    formControlName="javaScript" (ngModelChange)="onChangeCode('js',$event)">
+                </ngx-monaco-editor>
             </div>
             <div>
-                <iframe #iframe></iframe>
+               <!--  <iframe #iframe></iframe> -->
+                <iframe id="iframe-output"></iframe>
             </div>
             <div class="vertical-gutter"></div>
             <div class="horizontal-gutter"></div>
 
-            <div class="submit-group" >
+            <div class="submit-group">
                 <input type="submit" value="Actualizar" />
             </div>
         </div>
+
+       
+
+       
+
+      
+
+
+
     </form>
 
-
-
 </div>
+
