@@ -134,4 +134,25 @@ export class PerfilComponent implements OnInit {
       }
     );
   }
+
+  eliminarPerfil() {
+    const usuarioId: string = this.usuario._id ?? '';
+     Swal.fire({
+       title: '¿Estás seguro?',
+       text: '¿Quieres eliminar tu cuenta?',
+       icon: 'warning',
+       showCancelButton: true,
+       confirmButtonColor: '#F65F3C',
+       cancelButtonColor: '#d33',
+       confirmButtonText: 'Sí, eliminar cuenta',
+       cancelButtonText: 'Cancelar',
+     }).then((result) => {
+       if (result.isConfirmed) {
+         this.usuarioService.eliminarPerfil(usuarioId).subscribe((resp) => {
+            console.log('usuario eliminiado', this.usuario._id);
+            this.router.navigateByUrl('/');
+         });
+       }
+     });
+  }
 }

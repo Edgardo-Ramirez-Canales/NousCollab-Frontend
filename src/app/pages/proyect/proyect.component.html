@@ -1,51 +1,60 @@
 
-
 <div class="app">
-    <form id="projectEditform" autocomplete="off" [formGroup]="projectEditForm" (submit)="actualizarProject()">
+    <form id="projectEditform" 
+          autocomplete="off" 
+          [formGroup]="projectEditForm" 
+          (submit)="actualizarProject()">
+
 
         <div class="grid">
-            <div>
-               <!--  <textarea  id="html" #html placeholder="html" formControlName="html"></textarea> -->
-                <ngx-monaco-editor #htmlEditor class="theme" [options]="codeEditorOptions"  formControlName="html"
-                    (ngModelChange)="onChangeCode('html',$event)">
+           
+            <div  id="html" >
+                
+                <ngx-monaco-editor 
+                     class="theme" 
+                    [options]="codeEditorOptions"  
+                    formControlName="html"
+                    (ngModelChange)="onChangeCode('html',$event)"
+                    >
+                </ngx-monaco-editor>
+            </div>
+
+            <div id="css">
+                <ngx-monaco-editor 
+                     class="theme" 
+                     [options]="codeEditorOptionsCss" 
+                     formControlName="css" 
+                     (ngModelChange)="onChangeCode('css',$event)">
+                </ngx-monaco-editor>
+            </div>
+
+            <div id="js">
+                <ngx-monaco-editor  
+                     class="theme" 
+                     [options]="codeEditorOptionsJs" 
+                     formControlName="javaScript" 
+                     (ngModelChange)="onChangeCode('js',$event)">
                 </ngx-monaco-editor>
             </div>
 
             <div>
-               <!--  <textarea name="" id="css" #css placeholder="css" formControlName="css"></textarea> -->
-                <ngx-monaco-editor #htmlEditorCss class="theme" [options]="codeEditorOptionsCss" 
-                    formControlName="css" (ngModelChange)="onChangeCode('css',$event)">
-                </ngx-monaco-editor>
-            </div>
-
-            <div>
-               <!--  <textarea name="" id="js" #js placeholder="js" formControlName="javaScript"></textarea> -->
-
-                <ngx-monaco-editor #htmlEditorJs class="themeb" [options]="codeEditorOptionsJs" 
-                    formControlName="javaScript" (ngModelChange)="onChangeCode('js',$event)">
-                </ngx-monaco-editor>
-            </div>
-            <div>
-               <!--  <iframe #iframe></iframe> -->
                 <iframe id="iframe-output"></iframe>
             </div>
+
             <div class="vertical-gutter"></div>
             <div class="horizontal-gutter"></div>
 
-            <div class="submit-group">
-                <input type="submit" value="Actualizar" />
-            </div>
-        </div>
-
-       
-
-       
-
-      
-
-
-
+            <button class="button" type="submit">
+                <svg class="svg-icon" width="24" viewBox="0 0 24 24" height="24" fill="none">
+                    <g stroke-width="2" stroke-linecap="round" stroke="#000000" fill-rule="evenodd" clip-rule="evenodd">
+                        <path d="m3 7h17c.5523 0 1 .44772 1 1v11c0 .5523-.4477 1-1 1h-16c-.55228 0-1-.4477-1-1z"></path>
+                        <path d="m3 4.5c0-.27614.22386-.5.5-.5h6.29289c.13261 0 .25981.05268.35351.14645l2.8536 2.85355h-10z">
+                        </path>
+                    </g>
+                </svg>
+                <span class="lable"><h5>Guardar</h5></span>
+            </button>
+        </div>   
     </form>
-
 </div>
 

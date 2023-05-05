@@ -42,37 +42,6 @@ export class ProyectsComponent implements OnInit {
     this.cargarMyProjects();
   }
 
-  proyectos: Proyecto[] = [
-    {
-      id: 1,
-      nombre: 'UNAH',
-      compartido: false,
-      por: '',
-    },
-    {
-      id: 2,
-      nombre: 'Futeca',
-      compartido: false,
-      por: '',
-    },
-    {
-      id: 3,
-      nombre: 'IzzyApp',
-      compartido: true,
-      por: 'Spoker76',
-    },
-    {
-      id: 4,
-      nombre: 'Optica',
-      compartido: true,
-      por: 'MaciBoom76',
-    },
-  ];
-
-  cargarProyectos() {
-    return this.proyectos;
-  }
-
   cargarMyProjects() {
     const usuarioId: string = this.usuario._id ?? '';
     this.cargando = true;
@@ -94,8 +63,38 @@ export class ProyectsComponent implements OnInit {
         },
       };
       this.router.navigate(['/nousCollab/proyect'], navigationExtras);
-      console.log(id);
+      /*  console.log(id); */
       /*  console.log('css',resp.css); */
+    });
+  }
+
+  /* eliminarProject(id: string) {
+    if (confirm('¿Está seguro que desea eliminar este proyecto?')) {
+      console.log('eliminar id', id);
+      this.projectService.eliminarProject(id).subscribe((resp) => {
+        console.log('eliminar', resp);
+        this.cargarMyProjects();
+      });
+    }
+  } */
+
+  eliminarProject(id: string) {
+    Swal.fire({
+      title: '¿Estás seguro?',
+      text: '¿Quieres eliminar este proyecto?',
+      icon: 'warning',
+      showCancelButton: true,
+      confirmButtonColor: '#F65F3C',
+      cancelButtonColor: '#d33',
+      confirmButtonText: 'Sí, eliminar proyecto',
+      cancelButtonText: 'Cancelar',
+    }).then((result) => {
+      if (result.isConfirmed) {
+        console.log('eliminar id', id);
+        this.projectService.eliminarProject(id).subscribe((resp) => {
+          this.cargarMyProjects();
+        });
+      }
     });
   }
 }

@@ -25,12 +25,6 @@ export class SidebarComponent implements OnInit {
       hoverColor: '',
     },
     {
-      icon: 'bx bx-share-alt',
-      text: 'Compartir',
-      active: false,
-      hoverColor: '',
-    },
-    {
       icon: 'bx bx-user',
       text: 'usuario',
       active: false,

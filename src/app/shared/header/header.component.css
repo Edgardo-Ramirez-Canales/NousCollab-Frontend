@@ -10,6 +10,7 @@
   left: 0;
   z-index: var(--z-fixed);
   padding-top: 0px;
+    z-index: 1;
   
 }
 /*=============== NAV ===============*/

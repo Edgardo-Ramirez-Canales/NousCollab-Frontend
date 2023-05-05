@@ -3,7 +3,7 @@
   <div class="space">
 
     <header class="projects__header">
-      <img src="https://i.ibb.co/58kfYG8/gestion-de-proyectos.png" alt="Crear proyectos" border="0" class="img-p">
+      <img src="assets/img/perfil1.png" alt="Crear proyectos" border="0" class="img-p">
       <h2>Perfil Usuario</h2>
     </header>
 
@@ -63,7 +63,7 @@
             <div class="infos">
               <div class="image">
                 <img [src]="usuario.image"
-                  onerror="this.onerror=null; this.src='http://localhost:3000/nousCollab/files/project/f8f7864b-9437-49fd-b6b9-e96c41ea2c45.jpeg';" alt="">
+                  onerror="this.onerror=null; this.src='assets/img/user.png';" alt="">
 
               </div>
               <div class="info">
@@ -77,9 +77,11 @@
                 </div>
               </div>
             </div>
-            <button class="request" type="button">Crear Proyecto</button>
-            <button class="request" type="button">Mis Proyectos</button>
-            <button class="request" type="button">Eliminar Cuenta</button>
+            <button class="request" [routerLink]="['../createProyect']"      routerLinkActive="router-link-active"  type="button">Crear Proyecto</button>
+            <button class="request" [routerLink]="['../proyects']" routerLinkActive="router-link-active"  type="button">Mis Proyectos</button>
+            <button class="request" 
+                    type="button"
+                    (click)="eliminarPerfil()">Eliminar Cuenta</button>
           </div>
         </section>
   </div>

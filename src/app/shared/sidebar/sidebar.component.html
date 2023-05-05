@@ -1,12 +1,17 @@
 <div class="navigation">
   <ul>
-    <li class="" [ngClass]="{'active': item.active}" *ngFor="let item of items; let i = index;">
-      <a href="{{ item.link }}" (click)="activarLink(i)">
-        <span class="icon" [ngStyle]="{ 'background-color': hoveredIndex === i ? 'rgba(254, 173, 86, 0.826)' : '' }" (mouseover)="onMouseOver(i)"
-          (mouseout)="onMouseOut()">
-          <i [ngClass]="'bx ' + item.icon"></i>
-        </span>
-
+    <li class="" [ngClass]="{'active': item.active}"
+        *ngFor="let item of items; let i = index;">
+      
+        <a href="{{ item.link }}" (click)="activarLink(i)">
+        
+          <span class="icon" 
+                [ngStyle]="{ 'background-color': 
+                hoveredIndex === i ? 'rgba(254, 173, 86, 0.826)' : '' }"
+                (mouseover)="onMouseOver(i)"
+                (mouseout)="onMouseOut()">
+               <i [ngClass]="'bx ' + item.icon"></i>
+          </span>
         <span class="text">{{ item.text }}</span>
       </a>
     </li>

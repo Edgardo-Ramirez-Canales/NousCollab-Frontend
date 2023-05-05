@@ -76,4 +76,9 @@ export class UsuarioService {
     const url = `${base_url}/users/update/${id}`;
     return this.http.put(url, formData);
   }
+
+  eliminarPerfil(id: string) {
+    const url = `${base_url}/users/delete/${id}`;
+    return this.http.delete(url);
+  }
 }
