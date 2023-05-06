@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 declare var ScrollReveal: any;
-declare var Swiper: any;
 @Component({
   selector: 'app-landing',
   templateUrl: './landing.component.html',
@@ -14,7 +13,7 @@ export class landingComponent implements OnInit {
     const navToggle: HTMLElement | null = document.getElementById('nav-toggle');
     const navClose: HTMLElement | null = document.getElementById('nav-close');
 
-    /* Abrir el menu en responsive */
+    
     if (navToggle) {
       navToggle.addEventListener('click', () => {
         if (navMenu) {
@@ -22,7 +21,7 @@ export class landingComponent implements OnInit {
         }
       });
     }
-    /* Para cerrar el menu */
+ 
     if (navClose) {
       navClose.addEventListener('click', () => {
         if (navMenu) {
@@ -30,7 +29,7 @@ export class landingComponent implements OnInit {
         }
       });
     }
-    /* AL DAR CLICK EN UN ENLACE EN MODO CELL */
+  
     const navLink: NodeListOf<Element> =
       document.querySelectorAll('.nav__link');
     function linkAction() {
@@ -41,7 +40,7 @@ export class landingComponent implements OnInit {
     }
     navLink.forEach((item) => item.addEventListener('click', linkAction));
 
-    //Scroll up FLECHA VOLVER HACIA ARRIBA
+   
     function scrollUp(): void {
       const scrollup: HTMLElement | null = document.getElementById('scroll-up');
       if (scrollup && window.scrollY >= 460) {
@@ -50,10 +49,10 @@ export class landingComponent implements OnInit {
         scrollup.classList.remove('show-scroll');
       }
     }
-    /* ASIGNAR LA FUNCION A LA VENTANA */
+   
     window.addEventListener('scroll', scrollUp);
 
-    //Sections active INDICA DONDE ESTA EL INDICADOR 
+    
     const sections: NodeListOf<HTMLElement> =
       document.querySelectorAll('section[id]');
 

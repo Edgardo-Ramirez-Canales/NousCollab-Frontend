@@ -1,13 +1,10 @@
 import { Injectable, NgZone } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Router } from '@angular/router';
-
 import { RegisterForm } from '../interface/register-form.interface';
 import { LoginForm } from '../interface/login-form.interface';
-import { tap, map, catchError } from 'rxjs/operators';
+import {  map } from 'rxjs/operators';
 import { Observable, BehaviorSubject } from 'rxjs';
-
-import { Subject } from 'rxjs';
 import { environment } from 'src/environments/environment';
 import { Usuario } from '../models/usuario.model';
 import { PerfilForm } from '../interface/perfil-form.interface';

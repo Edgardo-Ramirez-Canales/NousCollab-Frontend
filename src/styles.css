@@ -1,12 +1,8 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;900&display=swap");
 
-/* Fuente */
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;900&display=swap');
-
-/*=============== VARIABLES CSS ===============*/
 :root {
   --header-height: 3.5rem;
 
-  /*========== Colores ==========*/
   --hue: 14;
   --first-color: hsl(var(--hue), 91%, 54%);
   --first-color-alt: hsl(var(--hue), 91%, 50%);
@@ -14,40 +10,42 @@
   --text-color: hsl(var(--hue), 4%, 95%);
   --text-color-light: hsl(var(--hue), 4%, 55%);
 
-  /*Gradientes*/
-  --body-color: linear-gradient(90deg, hsl(23, 84%, 75%) 0%, hsl(9, 92%, 54%) 100%);
-  --container-color: linear-gradient(136deg, hsl(120, 1%, 15%) 0%, hsl(0, 0%, 3%) 100%);
+  --body-color: linear-gradient(
+    90deg,
+    hsl(23, 84%, 75%) 0%,
+    hsl(9, 92%, 54%) 100%
+  );
+  --container-color: linear-gradient(
+    136deg,
+    hsl(120, 1%, 15%) 0%,
+    hsl(0, 0%, 3%) 100%
+  );
 
-  /*========== Fuente y tipografia ==========*/
-  --body-font: 'Poppins', sans-serif;
+  --body-font: "Poppins", sans-serif;
   --biggest-font-size: 2rem;
   --h1-font-size: 1.5rem;
   --h2-font-size: 1.25rem;
   --h3-font-size: 1rem;
-  --normal-font-size: .938rem;
-  --small-font-size: .813rem;
-  --smaller-font-size: .75rem;
+  --normal-font-size: 0.938rem;
+  --small-font-size: 0.813rem;
+  --smaller-font-size: 0.75rem;
 
-  /*========== Grosor de letra ==========*/
   --font-medium: 500;
   --font-semi-bold: 600;
   --font-black: 900;
 
-  /*========== Margenes Bottom ==========*/
-  --mb-0-25: .25rem;
-  --mb-0-5: .5rem;
-  --mb-0-75: .75rem;
+  --mb-0-25: 0.25rem;
+  --mb-0-5: 0.5rem;
+  --mb-0-75: 0.75rem;
   --mb-1: 1rem;
   --mb-1-5: 1.5rem;
   --mb-2: 2rem;
   --mb-2-5: 2.5rem;
 
-  /*========== z index Elementos superpuestos ==========*/
   --z-tooltip: 10;
-  --z-fixed: 100; /* para el boton fijo del scroll */
+  --z-fixed: 100;
 }
 
-/* Responsive tipografia */
 @media screen and (min-width: 992px) {
   :root {
     --biggest-font-size: 4rem;
@@ -55,24 +53,22 @@
     --h2-font-size: 1.5rem;
     --h3-font-size: 1.25rem;
     --normal-font-size: 1rem;
-    --small-font-size: .875rem;
-    --smaller-font-size: .813rem;
+    --small-font-size: 0.875rem;
+    --smaller-font-size: 0.813rem;
   }
 }
 
-/*=============== BASE ===============*/
-
-*{
+* {
   box-sizing: border-box;
   padding: 0;
   margin: 0;
 }
 
-html{
-  scroll-behavior: smooth; /* para que me invite a hacer scroll suave*/
+html {
+  scroll-behavior: smooth;
 }
 
-body{
+body {
   margin: var(--header-height) 0 0 0;
   font-family: var(--body-font);
   font-size: var(--normal-font-size);
@@ -80,63 +76,63 @@ body{
   color: var(--text-color);
 }
 
-h1,h2,h3,h4{
+h1,
+h2,
+h3,
+h4 {
   color: var(--title-color);
   font-weight: var(--font-semi-bold);
 }
 
-ul{
-  list-style: none; /*para que no lleve los puntos de las listas  */
+ul {
+  list-style: none;
 }
 
-a{
-  text-decoration: none; /* quita el subrallado a los enlaces */
+a {
+  text-decoration: none;
 }
 
-img{
-  max-width: 100%; 
-  height: auto; /* altura autimatica */
+img {
+  max-width: 100%;
+  height: auto;
 }
 
 button,
-input{
+input {
   border: none;
-  outline: none; /* sin borde externo */
+  outline: none;
 }
 
-button{
+button {
   cursor: pointer;
   font-family: var(--body-font);
   font-size: var(--normal-font-size);
 }
 
-/*=============== REUSABLE CSS CLASSES ===============*/
-.section{
+.section {
   padding: 3.5rem 0 1rem 0;
 }
 
-.section__title{
+.section__title {
   font-size: var(--h2-font-size);
   margin-bottom: var(--mb-2);
   text-align: center;
 }
 
-/*=============== LAYOUT ===============*/
-.container{
+.container {
   max-width: 968px;
   margin-left: var(--mb-1-5);
   margin-right: var(--mb-1-5);
 }
 
-.grid{
+.grid {
   display: grid;
 }
 
-.main{
-  overflow: hidden; /*For animation*/
+.main {
+  overflow: hidden;
 }
 
-/*=============== SCROLL BAR ===============*/
 ::-webkit-scrollbar {
   width: 0.6rem;
   background: #413e3e;
@@ -151,7 +147,6 @@ html {
   scroll-behavior: smooth;
 }
 
-/*=============== HEADER ===============*/
 .header {
   width: 100%;
   background: var(--body-color);
@@ -162,7 +157,6 @@ html {
   padding-top: 10px;
 }
 
-/*=============== NAV ===============*/
 .nav {
   height: var(--header-height);
   display: flex;

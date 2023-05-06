@@ -1,12 +1,8 @@
 import {
   Component,
-  ViewChild,
-  ElementRef,
   AfterViewInit,
-  Inject,
 } from '@angular/core';
 import Split from 'split-grid';
-import { Router } from '@angular/router';
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 import { ProjectService } from '../../services/project.service';
 import { Project } from '../../models/projects.model';
@@ -27,13 +23,13 @@ export class ProyectComponent implements AfterViewInit {
   cssCode: string = '';
   jsCode: string = '';
 
-  /* configuracion del html */
+
   codeEditorOptions = {
     theme: 'vs-dark',
     language: 'html',
     automaticLayout: true,
   };
-  /* configuracion del css */
+
   codeEditorOptionsCss = {
     theme: 'vs-dark',
     language: 'css',
@@ -53,9 +49,7 @@ export class ProyectComponent implements AfterViewInit {
   ) {}
 
   ngOnInit() {
-    /* RESIVO EL ID POR EL URL */
     this.id = this.route.snapshot.queryParamMap.get('id') ?? '';
-    /* FORMULARIO QUE GUARDA EL HTML CSS JS*/
     this.projectEditForm = this.fb.group({
       html: ['', Validators.required],
       css: ['', [Validators.required]],
@@ -64,13 +58,10 @@ export class ProyectComponent implements AfterViewInit {
     this.obtenerProject();
   }
 
-  /*OBTENGO LA INFO DEL PROYECTO POR EL ID */
+
   obtenerProject() {
     this.projectService.cargarProjectPorId(this.id).subscribe((resp: any) => {
       this.projectSelect = resp as Project;
-      /*  console.log('mi proyecto loco', this.projectSelect);
-      console.log('this ', this.projectSelect.html); */
-      // Cargar valores del proyecto en el formulario
       this.projectEditForm.patchValue({
         html: this.projectSelect.html,
         css: this.projectSelect.css,
@@ -79,7 +70,6 @@ export class ProyectComponent implements AfterViewInit {
     });
   }
 
-  /*Alert de exito  */
   Toast = Swal.mixin({
     toast: true,
     position: 'top-end',
@@ -92,10 +82,8 @@ export class ProyectComponent implements AfterViewInit {
     },
   });
 
-  /* ACTUALIZA EL PROYECTO */
+ 
   actualizarProject() {
-    /* console.log('actualizar');
-    console.log(this.projectEditForm.value); */
     const formData = this.projectEditForm.value;
     const html = formData.html ? formData.html.trim() : '';
     const projectData: any = {
@@ -105,8 +93,6 @@ export class ProyectComponent implements AfterViewInit {
     };
     this.projectService.actualizarProject(projectData, this.id).subscribe(
       (resp) => {
-        console.log('Proyecto actualizado');
-        console.log(resp);
         // Manejo de exito
         this.Toast.fire({
           icon: 'success',
@@ -114,7 +100,6 @@ export class ProyectComponent implements AfterViewInit {
         });
       },
       (err) => {
-        //Manejo de errores
         Swal.fire({
           position: 'center',
           icon: 'error',
@@ -153,30 +138,6 @@ export class ProyectComponent implements AfterViewInit {
       console.error('One or both gutters not found');
     }
   }
-
-  /* onChangeHtml(event: any) {
-    this.htmlCode = event;
-    const iframe = document.getElementById(
-      'iframe-output'
-    ) as HTMLIFrameElement;
-    iframe.srcdoc = `<html><head><style>${this.cssCode}</style></head><body><script>${this.jsCode}</script>${this.htmlCode}</body></html>`;
-  }
-
-  onChangeCss(event: any) {
-    this.cssCode = event;
-    const iframe = document.getElementById(
-      'iframe-output'
-    ) as HTMLIFrameElement;
-    iframe.srcdoc = `<html><head><style>${this.cssCode}</style></head><body><script>${this.jsCode}</script>${this.htmlCode}</body></html>`;
-  }
-
-  onChangeJs(event: any) {
-    this.jsCode = event;
-    const iframe = document.getElementById(
-      'iframe-output'
-    ) as HTMLIFrameElement;
-    iframe.srcdoc = `<html><head><style>${this.cssCode}</style></head><body><script>${this.jsCode}</script>${this.htmlCode}</body></html>`;
-  } */
 
   onChangeCode(field: string, event: any) {
     switch (field) {

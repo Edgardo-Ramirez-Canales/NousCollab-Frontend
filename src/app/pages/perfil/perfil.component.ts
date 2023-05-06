@@ -5,7 +5,6 @@ import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 import { ImageUploadServices } from '../../services/imageUpload.service';
 import { Router } from '@angular/router';
 import Swal from 'sweetalert2';
-import { PerfilForm } from '../../interface/perfil-form.interface';
 
 @Component({
   selector: 'app-perfil',
@@ -26,7 +25,6 @@ export class PerfilComponent implements OnInit {
     usuarioService.usuario.subscribe((usuario) => {
       if (usuario) {
         this.usuario = usuario;
-        console.log(this.usuario);
       }
     });
   }
@@ -42,7 +40,6 @@ export class PerfilComponent implements OnInit {
     });
   }
 
-  /*Alert de exito  */
   Toast = Swal.mixin({
     toast: true,
     position: 'top-end',
@@ -77,14 +74,10 @@ export class PerfilComponent implements OnInit {
       return;
     }
     const usuarioId: string = this.usuario._id ?? '';
-    // Llamar al servicio de carga de imágenes
     this.imageUploadServices.uploadImage(imageFile).subscribe(
       (resp: any) => {
         const secureUrl = resp.secureUrl;
-        /*  console.log(secureUrl); */
-        // llama al servicio de crear proyecto
         const name = formData.name ? formData.name.trim() : '';
-
         const perfilData: any = {
           name,
           email: formData.email,
@@ -101,7 +94,6 @@ export class PerfilComponent implements OnInit {
               (this.usuario.role = resp.role);
             console.log('Usuario Modificado');
             console.log('oooooooffffffffff', resp.name);
-            // Manejo de exito
             this.Toast.fire({
               icon: 'success',
               title: 'Usuario Modificado correctamente',
@@ -109,7 +101,7 @@ export class PerfilComponent implements OnInit {
             this.router.navigateByUrl('/nousCollab/perfil');
           },
           (err) => {
-            // Manejo de error
+     
             Swal.fire({
               position: 'center',
               icon: 'error',
@@ -122,7 +114,6 @@ export class PerfilComponent implements OnInit {
         );
       },
       (err) => {
-        // Manejo de error
         Swal.fire({
           position: 'center',
           icon: 'error',
@@ -149,7 +140,6 @@ export class PerfilComponent implements OnInit {
      }).then((result) => {
        if (result.isConfirmed) {
          this.usuarioService.eliminarPerfil(usuarioId).subscribe((resp) => {
-            console.log('usuario eliminiado', this.usuario._id);
             this.router.navigateByUrl('/');
          });
        }

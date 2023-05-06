@@ -1,17 +1,12 @@
 
-
-
-/* Show menu */
 .show-menu {
   top: 0;
 }
 
-/* Change background header */
 .scroll-header {
   background: var(--container-color);
 }
 
-/* Active link */
 .active-link {
   position: relative;
 }
@@ -27,7 +22,6 @@
   border-radius: 50%;
 }
 
-/*=============== HOME ===============*/
 .home__content {
   row-gap: 1rem;
 }
@@ -98,12 +92,6 @@
   justify-content: space-between;
 }
 
-
-
-
-
-
-/*=============== BUTTONS ===============*/
 .button {
   display: inline-block;
   background-color: var(--first-color);
@@ -113,8 +101,6 @@
   font-weight: var(--font-medium);
   transition: 0.3s;
 }
-
-
 
 .button__icon {
   font-size: 1.25rem;
@@ -141,7 +127,6 @@
   column-gap: 0.5rem;
 }
 
-/*=============== CATEGORY ===============*/
 .category__container {
   grid-template-columns: repeat(2, 1fr);
   gap: 1rem 2rem;
@@ -165,7 +150,6 @@
   transform: translateY(-0.5rem);
 }
 
-/*=============== ABOUT ===============*/
 .about__container {
   row-gap: 0.1rem;
 }
@@ -185,7 +169,6 @@
   animation: floating 2s ease-in-out infinite;
 }
 
-/*=============== TRICK OR TREAT ===============*/
 .trick__container {
   grid-template-columns: repeat(2, 1fr);
   gap: 1.0rem;
@@ -245,7 +228,6 @@
   right: 0;
 }
 
-/*=============== DISCOUNT ===============*/
 .discount__container {
   background: var(--container-color);
   border-radius: 1rem;
@@ -267,7 +249,6 @@
   justify-self: center;
 }
 
-/*=============== NEW ARRIVALS ===============*/
 .new__container {
   padding-top: 1rem;
 }
@@ -349,7 +330,6 @@
   right: 0;
 }
 
-/*=============== NEWSLETTER ===============*/
 .newsletter__description {
   text-align: center;
   margin-bottom: var(--mb-1-5);
@@ -374,7 +354,6 @@
   color: var(--text-color);
 }
 
-/*=============== FOOTER ===============*/
 .footer {
   position: relative;
   overflow: hidden;
@@ -469,7 +448,6 @@
   margin-top: 4.5rem;
 }
 
-/*=============== SCROLL UP ===============*/
 .scrollup {
   position: fixed;
   background: var(--container-color);
@@ -493,12 +471,10 @@
   opacity: 1;
 }
 
-/* Show Scroll Up*/
 .show-scroll {
   bottom: 3rem;
 }
 
-/*=============== SCROLL BAR ===============*/
 ::-webkit-scrollbar {
   width: 0.6rem;
   background: #413e3e;
@@ -509,8 +485,6 @@
   border-radius: 0.5rem;
 }
 
-/*===============  BREAKPOINTS ===============*/
-/* For small devices */
 @media screen and (max-width: 320px) {
   .container {
     margin-left: var(--mb-1);
@@ -533,7 +507,6 @@
   }
 }
 
-/* For medium devices */
 @media screen and (min-width: 576px) {
   .about__container {
     grid-template-columns: 0.8fr;
@@ -651,7 +624,6 @@
 }
 }
 
-/* For large devices */
 @media screen and (min-width: 992px) {
   .container {
     margin-left: auto;
@@ -768,7 +740,6 @@
   }
 }
 
-/*=============== KEYFRAMES ===============*/
 @keyframes floating {
   0% {
     transform: translate(0, 0px);

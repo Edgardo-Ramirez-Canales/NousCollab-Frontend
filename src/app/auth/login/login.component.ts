@@ -14,7 +14,6 @@ export class LoginComponent implements OnInit {
     private router: Router,
     private fb: FormBuilder,
     private usuarioService: UsuarioService,
-    private ngZone: NgZone
   ) {}
 
   ngOnInit(): void {}
@@ -27,7 +26,7 @@ export class LoginComponent implements OnInit {
     remember: [true, Validators.required],
   });
 
-  /*Alert de exito  */
+  
   Toast = Swal.mixin({
     toast: true,
     position: 'top-end',
@@ -43,7 +42,6 @@ export class LoginComponent implements OnInit {
   login() {
     this.formSubmitted = true;
     const formData = this.loginForm.value;
-    // Validar que el email no sea nulo ni indefinido
     const email = formData.email ? formData.email.trim() : '';
     const loginData: any = {
       email,
@@ -62,12 +60,10 @@ export class LoginComponent implements OnInit {
           icon: 'success',
           title: 'Inicio de Sesion Exitoso',
         });
-        //navegar a projects
         this.router.navigateByUrl('/nousCollab/proyects');
-       /*  console.log(resp);   */
       },
       (err) => {
-        // Si sucede un error
+        
         Swal.fire({
           position: 'center',
           icon: 'error',

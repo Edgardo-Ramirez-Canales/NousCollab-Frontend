@@ -7,6 +7,5 @@ export class Usuario {
     public isActives?: string,
     public availableProjects?: number,
     public _id?:string,
-    /*  public password?: string */
   ) {}
 }

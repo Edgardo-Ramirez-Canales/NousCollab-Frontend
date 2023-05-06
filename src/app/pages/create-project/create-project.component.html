@@ -10,14 +10,11 @@
       <main>
         <section class="section-contact">
           <div class="container">
-            <!--start of contact form-->
             <form
                id="projectform" 
                autocomplete="off" 
                [formGroup]="projectForm"
                (ngSubmit)="crearProject()">
-
-              <!-- name -->
               <div class="form-group">
                 <label for="name">Nombre Proyecto</label>
                 <input type="text" 
@@ -26,7 +23,6 @@
                        placeholder="" 
                        formControlName="nameProject"/>
               </div>
-              <!--image-->
               <div class="form-group">
                 <label for="image" >Imagen</label>
                 <input type="file" 
@@ -37,7 +33,7 @@
                      class="drop-container"
                       (change)="onImageSelected($event)" accept=".jpg,.png,.jpeg" />
               </div>
-              <!--description-->
+          
               <div class="form-group full">
                 <label for="description" >Descripcion de Proyecto</label>
                 <textarea name="description" 

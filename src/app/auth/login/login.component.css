@@ -26,7 +26,7 @@
   margin-top: -5px;
 }
 
-/*  right section */
+
 .welcomeDiv {
   width: 50%;
   padding: 10px;
@@ -37,7 +37,6 @@
 }
 
 
-/* input fields */
 .formGroup {
   width: 100%;
   position: relative;
@@ -50,10 +49,6 @@
   border-style: none;
   padding-left: 30px !important;
 }
-
-/* icons inside form */
-
-
 
 input:focus {
   border-color: white;
@@ -72,12 +67,11 @@ input:focus {
   border-style: none;
 }
 
-/* hover efects */
 .btn:hover {
   background-color: white;
   color: black;
 }
-/* making HTML registration form responsive to mobile devices */
+
 @media screen and (max-width: 1000px) {
   .formWraper {
     width: 98%;
@@ -102,7 +96,6 @@ input:focus {
   margin-top: 3.8rem;
 }
 
-/* carpeta */
 .accordion--1 {
   --color: #ff7e2e;
 }

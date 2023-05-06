@@ -33,7 +33,6 @@ export class ProyectsComponent implements OnInit {
     usuarioService.usuario.subscribe((usuario) => {
       if (usuario) {
         this.usuario = usuario;
-        /*  console.log('esta loco esto', this.usuario); */
       }
     });
   }
@@ -48,7 +47,6 @@ export class ProyectsComponent implements OnInit {
     this.projectService.cargarMyProjects(usuarioId).subscribe((resp) => {
       this.cargando = false;
       this.projects = resp as Project[];
-      /*  console.log('mis proyectos ddd', this.projects); */
     });
   }
 
@@ -57,26 +55,13 @@ export class ProyectsComponent implements OnInit {
       const navigationExtras: NavigationExtras = {
         queryParams: {
           id: id,
-          /* css: resp.css,
-          html: resp.html,
-          javascript: resp.javaScript,  */
         },
       };
       this.router.navigate(['/nousCollab/proyect'], navigationExtras);
-      /*  console.log(id); */
-      /*  console.log('css',resp.css); */
     });
   }
 
-  /* eliminarProject(id: string) {
-    if (confirm('¿Está seguro que desea eliminar este proyecto?')) {
-      console.log('eliminar id', id);
-      this.projectService.eliminarProject(id).subscribe((resp) => {
-        console.log('eliminar', resp);
-        this.cargarMyProjects();
-      });
-    }
-  } */
+
 
   eliminarProject(id: string) {
     Swal.fire({
@@ -90,7 +75,6 @@ export class ProyectsComponent implements OnInit {
       cancelButtonText: 'Cancelar',
     }).then((result) => {
       if (result.isConfirmed) {
-        console.log('eliminar id', id);
         this.projectService.eliminarProject(id).subscribe((resp) => {
           this.cargarMyProjects();
         });

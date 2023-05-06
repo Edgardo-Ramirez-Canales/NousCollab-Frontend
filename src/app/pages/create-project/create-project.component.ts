@@ -39,10 +39,9 @@ export class CreateProjectComponent implements OnInit {
     this.projectService.cargarProjects().subscribe((resp) => {
       this.cargando = false;
       this.projects = resp as Project[];
-      console.log(this.projects);
     });
   }
-  /*Alert de exito  */
+
   Toast = Swal.mixin({
     toast: true,
     position: 'top-end',
@@ -76,12 +75,9 @@ export class CreateProjectComponent implements OnInit {
        });     
       return 
     }
-    // Llamar al servicio de carga de imágenes
     this.imageUploadServices.uploadImage(imageFile).subscribe(
       (resp: any) => {
         const secureUrl = resp.secureUrl;
-        /*  console.log(secureUrl); */
-        // llama al servicio de crear proyecto
         const nameProject = formData.nameProject
           ? formData.nameProject.trim()
           : '';
@@ -93,9 +89,6 @@ export class CreateProjectComponent implements OnInit {
 
         this.projectService.crearProject(projectData).subscribe(
           (resp) => {
-            console.log('PROYECTO CREADO');
-            /*  console.log(resp); */
-            // Manejo de exito
             this.Toast.fire({
               icon: 'success',
               title: 'Proyecto creado correctamente',
@@ -103,7 +96,6 @@ export class CreateProjectComponent implements OnInit {
             this.router.navigateByUrl('/nousCollab/proyects');
           },
           (err) => {
-            // Manejo de error
             Swal.fire({
               position: 'center',
               icon: 'error',
@@ -116,7 +108,6 @@ export class CreateProjectComponent implements OnInit {
         );
       },
       (err) => {
-        // Manejo de error
         Swal.fire({
           position: 'center',
           icon: 'error',

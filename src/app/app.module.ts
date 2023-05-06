@@ -9,9 +9,6 @@ import { AuthModule } from './auth/auth.module';
 import { NopagefoundComponent } from './notpagefound/nopagefound.component';
 import { landingComponent } from './landing/landing.component';
 
-/* import { ProyectComponent } from './page/proyect/proyect.component';
- */
-
 @NgModule({
   declarations: [AppComponent, NopagefoundComponent, landingComponent],
   imports: [
