@@ -9,7 +9,7 @@ import { UsuarioService } from '../../services/usuario.service';
   styleUrls: ['./header.component.css'],
 })
 export class HeaderComponent {
-  constructor(private router: Router, private usuarioService: UsuarioService) {}
+  constructor( private usuarioService: UsuarioService) {}
 
   ngOnInit(): void {
     const navMenu: HTMLElement | null = document.getElementById('nav-menu');
