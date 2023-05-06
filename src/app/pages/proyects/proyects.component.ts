@@ -8,12 +8,7 @@ import { NavigationExtras } from '@angular/router';
 import { Router } from '@angular/router';
 import Swal from 'sweetalert2';
 
-interface Proyecto {
-  id: number;
-  nombre: string;
-  compartido: boolean;
-  por: string;
-}
+
 
 @Component({
   selector: 'app-proyects',

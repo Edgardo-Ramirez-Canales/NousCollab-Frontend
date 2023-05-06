@@ -1,8 +1,7 @@
 import { Injectable } from '@angular/core';
 import { ActivatedRouteSnapshot, CanActivate, RouterStateSnapshot, UrlTree,Router } from '@angular/router';
-import { Observable } from 'rxjs';
 import { UsuarioService } from '../services/usuario.service';
-import { tap } from 'rxjs/operators';
+
 
 @Injectable({
   
@@ -23,8 +22,5 @@ export class AuthGuard implements CanActivate {
     return tienetoken;
   }
   
-    
-   /*  console.log('paso por el canActivate del guard');
-    return true; */
   }
 

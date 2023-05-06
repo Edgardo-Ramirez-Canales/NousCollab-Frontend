@@ -93,7 +93,7 @@ export class ProyectComponent implements AfterViewInit {
     };
     this.projectService.actualizarProject(projectData, this.id).subscribe(
       (resp) => {
-        // Manejo de exito
+        
         this.Toast.fire({
           icon: 'success',
           title: 'Cambios Guardados Exitosamente',

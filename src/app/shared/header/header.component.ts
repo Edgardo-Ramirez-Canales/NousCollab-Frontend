@@ -1,7 +1,7 @@
 import { Router } from '@angular/router';
 import { Component, OnInit } from '@angular/core';
 import { UsuarioService } from '../../services/usuario.service';
-declare var ScrollReveal: any;
+
 
 @Component({
   selector: 'app-header',
@@ -15,8 +15,6 @@ export class HeaderComponent {
     const navMenu: HTMLElement | null = document.getElementById('nav-menu');
     const navToggle: HTMLElement | null = document.getElementById('nav-toggle');
     const navClose: HTMLElement | null = document.getElementById('nav-close');
-
-    /* Abrir el menu en responsive */
     if (navToggle) {
       navToggle.addEventListener('click', () => {
         if (navMenu) {
@@ -24,7 +22,7 @@ export class HeaderComponent {
         }
       });
     }
-    /* Para cerrar el menu */
+   
     if (navClose) {
       navClose.addEventListener('click', () => {
         if (navMenu) {
@@ -32,7 +30,7 @@ export class HeaderComponent {
         }
       });
     }
-    /* AL DAR CLICK EN UN ENLACE EN MODO CELL */
+    
     const navLink: NodeListOf<Element> =
       document.querySelectorAll('.nav__link');
     function linkAction() {

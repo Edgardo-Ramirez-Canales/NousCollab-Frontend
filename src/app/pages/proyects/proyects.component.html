@@ -1,15 +1,12 @@
 <body class="align">
 
   <div class="space">
-
     <header class="projects__header">
       <img src="assets/img/proyects.png" alt="gestion-de-proyectos" border="0" class="img-p">
       <h2>Mís proyectos</h2>
       <input class="button" type="submit" value="Crear nuevo proyecto" [routerLink]="['/nousCollab/createProyect']">
     </header>
-
     <div class="projects">
-
       <div  *ngFor="let project of projects">
         <div class="card">
           <img src="https://i.ibb.co/09Dhfkh/carpeta.png" alt="carpeta" border="0" class="carpeta" (click)="editarProject(project._id!)" routerLinkActive="router-link-active" >
@@ -27,13 +24,8 @@
                   id="Fill"></path>
               </svg>
             </button>
-
-         
         </div>
       </div>
-
     </div>
-
   </div>
-
 </body>
