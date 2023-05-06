@@ -10,9 +10,10 @@ import { LoginComponent } from './login/login.component';
 
 /*  */
 import { AuthRoutingModule } from './auth.routing';
+import { CarpetaComponent } from './carpeta/carpeta.component';
 
 @NgModule({
-  declarations: [RegisterComponent, LoginComponent],
+  declarations: [RegisterComponent, LoginComponent, CarpetaComponent],
   exports: [LoginComponent, RegisterComponent],
   imports: [
     CommonModule,
