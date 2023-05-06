@@ -8,9 +8,10 @@ import { PagesModule } from './pages/pages.module';
 import { AuthModule } from './auth/auth.module';
 import { NopagefoundComponent } from './notpagefound/nopagefound.component';
 import { landingComponent } from './landing/landing.component';
+import { TargetComponent } from './landing/target/target.component';
 
 @NgModule({
-  declarations: [AppComponent, NopagefoundComponent, landingComponent],
+  declarations: [AppComponent, NopagefoundComponent, landingComponent, TargetComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,
