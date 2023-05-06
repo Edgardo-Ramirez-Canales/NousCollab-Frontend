@@ -249,3 +249,67 @@ h2{
   opacity: 1;
   top: -160%;
 }
+
+@media screen and (max-width: 600px) {
+  .card {
+    max-width: 80px;
+    height: 100px;
+    margin-left: 25px;
+    margin-top: 15px;
+  }
+
+  .nombre {
+    font-size: 0.8rem;
+    bottom: 20px;
+  }
+
+  .opciones {
+    left: 65px;
+    bottom: 20px;
+    width: 20%;
+  }
+
+  .compartido {
+    left: 45px;
+    bottom: 60px;
+    width: 15%;
+    margin-left: 0.5em;
+  }
+
+  .projects {
+    height: auto;
+    
+  }
+
+  .projects__header,
+  .projects {
+    margin-top: 5px;
+    border-radius: 8px;
+    
+  }
+
+  .btn {
+    bottom: 75%;
+    right: 55%;
+  }
+
+  h2 {
+    font-size: 1.5rem;
+    margin-left: 35px;
+  }
+
+  .button {
+    max-width: 130px;
+    margin-top: 45px;
+    margin-right: 110px;
+    
+  }
+  .img-p { display: none;}
+
+  .align {
+   margin: 0% 0% 0 0% !important; 
+   padding: 0% 0% 0% 0% !important;
+}
+
+
+}

@@ -5,7 +5,7 @@ import { SidebarService } from '../services/sidebar.service';
 @Component({
   selector: 'app-pages',
   templateUrl: './pages.component.html',
-  styles: [],
+  styleUrls: ['./pages.component.css'],
 })
 export class PagesComponent implements OnInit {
   constructor(private sidebarService: SidebarService) {}

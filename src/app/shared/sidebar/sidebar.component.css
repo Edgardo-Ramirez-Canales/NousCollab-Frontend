@@ -132,3 +132,21 @@
   opacity: 1;
   visibility: visible;
 }
+
+
+@media screen and (max-width: 768px) {
+  .navigation {
+  position: relative;
+  width: 50px;
+  height: 300px;
+  background: #f45506b2;
+}
+
+.navigation ul {
+  display: flex;
+  flex-direction: column;
+  gap: 1px;
+  width: 150%;
+}
+  
+}

@@ -1,10 +1,9 @@
 <body class="align">
-
   <div class="space">
     <header class="projects__header">
       <img src="assets/img/proyects.png" alt="gestion-de-proyectos" border="0" class="img-p">
       <h2>Mís proyectos</h2>
-      <input class="button" type="submit" value="Crear nuevo proyecto" [routerLink]="['/nousCollab/createProyect']">
+      <input class="button" type="submit" value="Crear proyecto" [routerLink]="['/nousCollab/createProyect']">
     </header>
     <div class="projects">
       <div  *ngFor="let project of projects">
