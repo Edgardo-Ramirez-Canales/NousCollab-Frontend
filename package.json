@@ -19,8 +19,8 @@
     "@angular/platform-browser-dynamic": "^15.2.0",
     "@angular/router": "^15.2.0",
     "js-base64": "^3.7.5",
-    "monaco-editor": "--legacy-peer-deps",
-    "ngx-monaco-editor": "--legacy-peer-deps",
+    "monaco-editor": "^0.38.0",
+    "ngx-monaco-editor": "^12.0.0",
     "rxjs": "~7.8.0",
     "split-grid": "^1.0.11",
     "sweetalert2": "^11.7.3",
@@ -40,6 +40,7 @@
     "karma-jasmine": "~5.1.0",
     "karma-jasmine-html-reporter": "~2.0.0",
     "style-loader": "^3.3.2",
-    "typescript": "~4.9.4"
+    "typescript": "~4.9.4",
+    "webpack": "^5.82.0"
   }
 }
