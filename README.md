@@ -10,7 +10,6 @@ UNAH (Autonomous University of Honduras). Project for the **Systems Experts** cl
 
 - **Edgardo Adalid Ramírez** - _20181031309_ - [Edgardo-Ramirez-Canales](https://github.com/Edgardo-Ramirez-Canales)
 
-- **Josué Alexander Padilla** - _20162300511_ - [Roku-19](https://github.com/Spoker76)
 
 ## Necessary 📄
 
