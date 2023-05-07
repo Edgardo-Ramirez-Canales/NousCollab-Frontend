@@ -16,7 +16,7 @@ h2 {
 }
 
 .space {
-  width: 96%;
+  width: 90%;
 }
 
 .projects__header {
@@ -37,6 +37,32 @@ h2 {
 	display: flex;
 }
 
+@media screen and (max-width: 600px) {
+
+.section-contact {
+	padding-top: 20px;
+	display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+  .space {
+  width: 100%;
+}
+
+.projects__header {
+  border-top-left-radius: 0.45em;
+  border-top-right-radius: 0.45em;
+  margin-top: 15px;
+}
+
+.img-p{
+  display: none;
+}
+
+
+
+}
+
 .section-contact .container {
 	max-width: 1080px;
   margin-left: -90px;
@@ -45,8 +71,8 @@ h2 {
 
 @media (min-width: 600px) {
 	.section-contact .container {
-		padding-left: 64px;
-		padding-right: 64px
+		padding-left: 34px;
+		padding-right: 24px
 	}
 }
 
@@ -180,6 +206,15 @@ h2 {
   padding: 1rem;
   margin-left: -29px;
 	margin-right:10px ;
+}
+
+@media screen and (max-width: 600px) {
+.card {
+  max-width: 295px;
+  padding: 1rem;
+  margin-left: 5px;
+	margin-right:5px ;
+}  
 }
 
 .infos {
