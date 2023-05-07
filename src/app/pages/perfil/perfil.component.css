@@ -16,7 +16,7 @@ h2 {
 }
 
 .space {
-  width: 90%;
+  width: 95%;
 }
 
 .projects__header {
@@ -41,17 +41,18 @@ h2 {
 
 .section-contact {
 	padding-top: 20px;
+  width: 100%;
 	display: flex;
   flex-direction: column;
   justify-content: space-around;
+  position: relative;
+ 
 }
   .space {
-  width: 100%;
+  width: 90%;
 }
 
 .projects__header {
-  border-top-left-radius: 0.45em;
-  border-top-right-radius: 0.45em;
   margin-top: 15px;
 }
 
@@ -64,17 +65,22 @@ h2 {
 }
 
 .section-contact .container {
-	max-width: 1080px;
-  margin-left: -90px;
-	margin-right: -90px;
+	max-width: 85%;
+  margin-left: -8%;
+	margin-right: -8%;
 }
 
-@media (min-width: 600px) {
-	.section-contact .container {
-		padding-left: 34px;
-		padding-right: 24px
-	}
+@media screen and (max-width: 600px) {
+  .section-contact .container {
+    max-width: 80%;
+      margin-left: -2%;
+	    margin-right: -2%;
+   position: relative;
+   left: 10%;
+  }
 }
+
+
 
 @media (min-width: 1024px) {
 	.section-contact .container {
@@ -115,7 +121,7 @@ h2 {
 @media (min-width: 768px) {
 	.section-contact .container form {
 		-ms-grid-columns: (1fr)[2];
-		grid-template-columns: repeat(2, 1fr)
+		grid-template-columns: repeat(2, 50%)
 	}
 }
 
@@ -212,8 +218,10 @@ h2 {
 .card {
   max-width: 295px;
   padding: 1rem;
-  margin-left: 5px;
-	margin-right:5px ;
+  margin-left: 0px;
+	margin-right:0px ;
+  position: relative;
+ 
 }  
 }
 
